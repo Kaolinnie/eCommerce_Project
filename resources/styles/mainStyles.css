@@ -1,0 +1,67 @@
+:root {
+    --main-text-colour-dark: #011936;
+    --main-bg:#d7d7d7;
+    --main-bg-dark:#CFCBCA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--main-text-colour-dark);
+}
+html {
+    width: 100vw;
+}
+body {
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: var(--main-bg);
+}
+
+header {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-bg-dark);
+}
+footer {
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: var(--main-bg-dark);
+}
+#main_nav_links {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+li.main_nav_link {
+    height:80%;
+    transform: scale(1.0);
+    transition: all 0.5s;
+    aspect-ratio: 1/1;
+}
+li.main_nav_link:hover {
+    transform: scale(1.2);
+}
+li.main_nav_link img {
+    height: 80%;
+    aspect-ratio: 1/1;
+    /* transition:all 0.1s ease-in; */
+}
+li.main_nav_link :is(a,img) {
+    height: 100%;
+}
+/* li.main_nav_link img:hover {
+    height: 90%;
+} */
