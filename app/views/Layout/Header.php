@@ -22,7 +22,7 @@
             </a>
         </li> -->
         
-        <button type="button" class="btn btn-light">Sign In</button>
-        <button type="button" class="btn btn-primary">Sign Up</button>
+        <button type="button" class="btn btn-light" onclick="location.href='/Account/login'">Sign In</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='/Account/register'">Sign Up</button>
     </ul>
 </header>

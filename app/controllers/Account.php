@@ -2,7 +2,7 @@
 namespace app\controllers;
 
 class Account extends \app\core\Controller {
-    public function index() {
+    public function register() {
         if(isset($_POST['action'])) {
             if($_POST['password_input']==$_POST['confirm_password_input']) {
                 $password_hash = password_hash($_POST['password_input'],PASSWORD_DEFAULT);
@@ -20,7 +20,11 @@ class Account extends \app\core\Controller {
                 header('location:/Account/index?error=passwords do not match');
             }
         } else {
-            $this->view('Account/index');
+            $this->view('Account/register');
         }
+    }
+
+    public function login(){
+        $this->view('Account/login');
     }
 }
