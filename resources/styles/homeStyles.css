@@ -1,0 +1,13 @@
+.brief_pages {
+    width: 90%;
+    height: 35vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin:auto;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+.card-img-top {
+    height: 40%;
+    object-fit: cover;
+}
