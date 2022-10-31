@@ -1,7 +1,7 @@
 <header>
     <img src="/resources/images/figma.svg" alt="" id="logo">
     <ul id="main_nav_links">
-        <li class="main_nav_link">
+        <!-- <li class="main_nav_link">
             <a href="/">
                 <img src="/resources/images/home.png" alt="">
             </a>
@@ -20,6 +20,9 @@
             <a href="/Account">
                 <img src="/resources/images/profile.png" alt="">
             </a>
-        </li>
+        </li> -->
+        
+        <button type="button" class="btn btn-light">Sign In</button>
+        <button type="button" class="btn btn-primary">Sign Up</button>
     </ul>
 </header>
