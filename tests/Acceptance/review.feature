@@ -4,6 +4,6 @@ Feature: review
   I need to be able to leave a review and/or rating
 
   Scenario: review pizzapizza
-    Given
-    When
-    Then
+    Given I ordered pizza 
+    When I finished eating my pizza
+    Then I decide to write a review 
