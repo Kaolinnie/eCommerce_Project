@@ -7,4 +7,12 @@ class User extends \app\core\Model {
         $STMT = self::$_connection->prepare($SQL);
         $STMT->execute(["email"=>$this->email,"password"=>$this->password,"first_name"=>$this->first_name,"last_name"=>$this->last_name]);
     }
+
+    public function get($email){
+        $SQL = "SELECT * FROM user WHERE email=:email";
+        $STMT = self::$_connection->prepare($SQL);
+        $STMT->execute(["email"=>$email]);
+        $STMT->setFetchMode(\PDO::FETCH_CLASS, "\app\models\User");
+        return $STMT->fetch();
+    }
 }

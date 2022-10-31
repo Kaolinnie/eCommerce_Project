@@ -25,6 +25,23 @@ class Account extends \app\core\Controller {
     }
 
     public function login(){
-        $this->view('Account/login');
+        if(isset($_POST['action'])){
+            //creates a new object of user called currentUser
+            $currentUser = new \app\models\User();
+            $currentEmailInput = $this->validate_input($_POST['email_input']);
+            $passwordInput = $this->validate_input($_POST['password_input']);
+			$currentUser = $currentUser->get($currentEmailInput);
+            if(password_verify($passwordInput , $currentUser->password)){
+				//correct password provided
+				$_SESSION['email'] = $currentUser->email;
+				$_SESSION['user_id'] = $currentUser->user_id;
+				header("location:/");
+            }else{
+				//incorrect password provided
+                $this->view('Account/login', 'Incorrect password combination!');
+			}
+		}else{
+			$this->view('Account/login');
+        }
     }
 }
