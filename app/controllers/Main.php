@@ -5,4 +5,7 @@ class Main extends \app\core\Controller {
     public function index() {
         $this->view('Main/index');
     }
+    public function address() {
+        $this->view('Main/address');
+    }
 }

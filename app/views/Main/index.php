@@ -11,7 +11,10 @@
 <body>
     <?php $this->view('Layout/Header'); ?>
     <main>
-        <div class='card-deck brief_pages'></div>
+        <h2>Would you like to order some delicious food from your favourite store?</h2>
+        <h3>Click here to enter your address:</h3>
+        <button class="btn btn-primary" onclick="location.href='/Main/address'">Click me</button>
+        <!-- <div class='card-deck brief_pages'></div> -->
     </main>
     <?php $this->view('Layout/Footer');?>
     <?php $this->view('Layout/Scripts');?>

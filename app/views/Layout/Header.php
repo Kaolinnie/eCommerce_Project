@@ -1,5 +1,5 @@
 <header>
-    <img src="/resources/images/figma.svg" alt="" id="logo">
+    <a href='/' class="headerLogo"><img src="/resources/images/figma.svg" alt="" id="logo"></a>
     <ul id="main_nav_links">
         <!-- <li class="main_nav_link">
             <a href="/">

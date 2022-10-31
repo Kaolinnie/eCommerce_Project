@@ -6,3 +6,8 @@ $.ajax({
         $(".brief_pages").append(data);
     }
 });
+
+
+function startOrderWithAddress() {
+    alert("address is: "+$("#address_input").val());
+}

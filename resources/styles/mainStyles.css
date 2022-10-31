@@ -37,6 +37,9 @@ footer {
     text-align: center;
     background-color: var(--main-bg-dark);
 }
+:is(.headerLogo,.headerLogo img) {
+    height: 100%;
+}
 #main_nav_links {
     height: 100%;
     width: 20%;
