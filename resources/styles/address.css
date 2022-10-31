@@ -1,0 +1,28 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+form {
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.form-label {
+    width: 100%;
+    padding: 0.5em;
+}
+
+.full-field {
+    flex: 400px;
+}
+
+.slim-field-left, .slim-field-right {
+    flex: 1 150px;
+}

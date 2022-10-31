@@ -37,6 +37,9 @@ footer {
     text-align: center;
     background-color: var(--main-bg-dark);
 }
+main {
+    padding: 10px;
+}
 :is(.headerLogo,.headerLogo img) {
     height: 100%;
 }
