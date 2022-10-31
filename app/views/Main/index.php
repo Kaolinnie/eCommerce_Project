@@ -15,6 +15,9 @@
         <h3>Click here to enter your address:</h3>
         <button class="btn btn-primary" onclick="location.href='/Main/address'">Click me</button>
         <!-- <div class='card-deck brief_pages'></div> -->
+        <h2>Want to start a business?</h2>
+        <h3>Click here to register yours now:</h3>
+        <button class="btn btn-primary" onclick="location.href='/Company/index'">Click me</button>
     </main>
     <?php $this->view('Layout/Footer');?>
     <?php $this->view('Layout/Scripts');?>
