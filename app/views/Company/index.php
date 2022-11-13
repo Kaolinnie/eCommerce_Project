@@ -12,14 +12,14 @@
     <?php $this->view('Layout/Header'); ?>
     <main>
         <h2>Register your Company</h2>
-    <form action='' method="post">
-    
-            <label>Company Name</label><input type="companyName" name="company_name" required><br>
-            <label>Company Email</label><input type="companyEmail" name="company_email" required><br>
-            <label>Company Address</label><input type="companyAddress" name="company_address" required><br>
+        <form action='' method="post">
+            <label>Company Name<input type="text" name="company_name_input" required></label><br>
+            <label>Company Email<input type="text" name="company_email_input" required></label><br>
+            <label>Company Address<input type="text" name="company_address_input" required></label><br>
             <input class="submitButton btn btn-primary" type="submit" value="Register" name="action">
         </form>
     </main>
+    <?php $this->view('Layout/Scripts'); ?>
     <script src="/resources/scripts/main.js"></script>
 </body>
 </html>
