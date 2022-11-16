@@ -18,6 +18,7 @@
         <h2>Want to start a business?</h2>
         <h3>Click here to register yours now:</h3>
         <button class="btn btn-primary" onclick="location.href='/Company/index'">Click me</button>
+        
     </main>
     <?php $this->view('Layout/Footer');?>
     <?php $this->view('Layout/Scripts');?>

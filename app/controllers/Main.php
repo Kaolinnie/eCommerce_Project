@@ -8,4 +8,7 @@ class Main extends \app\core\Controller {
     public function address() {
         $this->view('Main/address');
     }
+    public function faq() {
+        $this->view('Main/Faq');
+    }
 }
