@@ -13,11 +13,15 @@
     <main>
         <h2>Register your Company</h2>
         <form action='' method="post">
+            <label>Owner's Name<input type="text" name="company_owner_name_input" required></label><br>
             <label>Company Name<input type="text" name="company_name_input" required></label><br>
             <label>Company Email<input type="text" name="company_email_input" required></label><br>
             <label>Company Address<input type="text" name="company_address_input" required></label><br>
+            <label>Company Suite <input type="text" name="company_suite_input" placeholder="(Optional)"></label><br>
+            <label>Postal Code <input type="text" name="company_postal_code_input" required></label><br>
             <input class="submitButton btn btn-primary" type="submit" value="Register" name="action">
         </form>
+        <p>Please note that this is only a request, you will receive an email confirmation when our team approves your company page!</p>
     </main>
     <?php $this->view('Layout/Scripts'); ?>
     <script src="/resources/scripts/main.js"></script>
