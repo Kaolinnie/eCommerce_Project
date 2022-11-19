@@ -21,8 +21,16 @@
                 <img src="/resources/images/profile.png" alt="">
             </a>
         </li> -->
+        <?php 
+            if(isset($_SESSION['user_id'])){
+                echo "<button>Profile</button>";
+                echo "<button type='button' onclick=\"location.href='/Account/logout'\">Logout</button>";
+            } 
+            else {
+               echo  "<button type='button' class='btn btn-light' onclick=\"location.href='/Account/login'\">Sign In</button>";
+               echo  "<button type='button' class='btn btn-primary' onclick=\"location.href='/Account/register'\">Sign Up</button>";
+            }
+        ?>
         
-        <button type="button" class="btn btn-light" onclick="location.href='/Account/login'">Sign In</button>
-        <button type="button" class="btn btn-primary" onclick="location.href='/Account/register'">Sign Up</button>
     </ul>
 </header>

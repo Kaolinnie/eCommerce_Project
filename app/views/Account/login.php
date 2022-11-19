@@ -11,6 +11,14 @@
 <body>
     <?php $this->view('Layout/Header'); ?>
     <main>
+
+        <h2>Create account</h2>
+        
+        <form action='' method="post">
+            <label>Email</label><input type="email" name="email_input" required>
+            <label>Password</label><input type="password" name="password_input" required>
+            <input class="submitButton btn btn-primary" type="submit" value="Login" name="action">
+        </form>
         <?php 
             if(isset($_GET['error'])) {
                 $error = $_GET['error'];
@@ -18,13 +26,6 @@
                     <span>$error</span>
                 </div>";
         } ?>
-        <h2>Create account</h2>
-
-        <form action='' method="post">
-            <label>Email</label><input type="email" name="email_input" required>
-            <label>Password</label><input type="password" name="password_input" required>
-            <input class="submitButton btn btn-primary" type="submit" value="Login" name="action">
-        </form>
     </main>
 
     <?php $this->view('Layout/Footer');?>

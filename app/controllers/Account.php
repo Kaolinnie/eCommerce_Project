@@ -35,13 +35,19 @@ class Account extends \app\core\Controller {
 				//correct password provided
 				$_SESSION['email'] = $currentUser->email;
 				$_SESSION['user_id'] = $currentUser->user_id;
+                $_SESSION['deliverTo'] = $currentUser->address;
 				header("location:/");
             }else{
 				//incorrect password provided
-                $this->view('Account/login', 'Incorrect password combination!');
+                header("location:/Account/login?error=Incorrect password combination!");
 			}
 		}else{
 			$this->view('Account/login');
         }
+    }
+
+    public function logout(){
+        session_destroy(); 
+        header("location:/");
     }
 }
