@@ -50,4 +50,8 @@ class Account extends \app\core\Controller {
         session_destroy(); 
         header("location:/");
     }
+
+    public function profile(){
+        $this->view('Account/profile');
+    }
 }

@@ -23,8 +23,8 @@
         </li> -->
         <?php 
             if(isset($_SESSION['user_id'])){
-                echo "<button>Profile</button>";
-                echo "<button type='button' onclick=\"location.href='/Account/logout'\">Logout</button>";
+                echo "<button type='button' class='btn btn-warning' onclick=\"location.href='/Account/profile'\">Profile</button>";
+                echo "<button type='button' class='btn btn-info' type='button' onclick=\"location.href='/Account/logout'\">Logout</button>";
             } 
             else {
                echo  "<button type='button' class='btn btn-light' onclick=\"location.href='/Account/login'\">Sign In</button>";
