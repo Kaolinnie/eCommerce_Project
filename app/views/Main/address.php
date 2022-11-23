@@ -12,7 +12,7 @@
 <body>
 <?php $this->view('Layout/Header'); ?>
 <main>
-    <form action="" method="post" id="address_form" style="width:80%;background-color:blue;">
+    <form action="" method="post" id="address_form" style="width:80%;">
         <div class="form-row">
             <label>
                 <input class="form-control" required autocomplete="off" name="delivery_address" id="delivery_address" placeholder="Deliver to:">

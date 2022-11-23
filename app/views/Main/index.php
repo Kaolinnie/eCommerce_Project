@@ -20,6 +20,8 @@
         <h3>Click here to register yours now:</h3>
         <button class="btn btn-primary" onclick="location.href='/Company/index'">Click me</button>
     </div>
+        <h2>Here's some random text</h2>
+
     </main>
     <?php $this->view('Layout/Footer');?>
     <?php $this->view('Layout/Scripts');?>

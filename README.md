@@ -28,4 +28,4 @@ Our site will be modelled after a well-known online shops called [DoorDash](http
 
 We estimate our project will take approximately 130 hours, 65 hours per team member. This comes to about 6 hours per week per team member for this project.
 
-[Github repository](https://github.com/MercyWhistles/Ecommerce-Project)
+[Github repository](https://github.com/Kaolinnie/eCommerce_Project)
