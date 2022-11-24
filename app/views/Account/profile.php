@@ -12,9 +12,11 @@
     <?php $this->view('Layout/Header'); ?>
     <main>
         <div class="squareCloudBox">
-            <p>Lorem stuff</p>
+            <h2>Address</h2><br>
+            <p>264-8 Boulevard Saint Francis</p><br>
+            <p>Postal Code: J6J 5N6</p>
+            <button type="button" class="btn btn-secondary">Change Address</button>
         </div>
-    
     </main>
     <?php $this->view('Layout/Footer');?>
     <?php $this->view('Layout/Scripts');?>

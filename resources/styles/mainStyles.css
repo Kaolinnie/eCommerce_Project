@@ -22,7 +22,7 @@ body {
 }
 main {
     padding-left: 5.3vw;
-    padding-right:5.3vw;
+    padding-right: 5.3vw;
     padding-bottom: 7vh;
 }
 
@@ -69,12 +69,13 @@ footer {
     width: auto;
 }
 
+#account {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0.5rem;
 
-
-
-
-
-
+}
 
 #topmenu {
     padding-top: 1vh;
@@ -244,8 +245,20 @@ footer {
     height: 100%;
 }
 
+#test {
+    position: absolute;
+    height: 50vh;
+    width: 50vw;
+    background-color: #4b709e;
+    top: 25vh;
+    left: 25vw;
+    border-radius: 5vw;
+    padding: 2rem;
+}
 
-
+.fade {
+    filter: brightness(50%);
+}
 
 
 

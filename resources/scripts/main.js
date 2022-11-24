@@ -7,7 +7,6 @@ $.ajax({
     }
 });
 
-
 function startOrderWithAddress() {
     alert("address is: "+$("#address_input").val());
 }
