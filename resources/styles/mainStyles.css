@@ -293,6 +293,12 @@ footer {
     position: absolute;
     bottom: 7vh;
     left: 7vh;
+    transition: ease-in-out 1s;
+}
+
+.submitAddressChange:hover{
+    transition: ease-in-out 1s ;
+    background-color: #b8b8b8;
 }
 
 .submitAddressChange:focus{
@@ -309,5 +315,38 @@ footer {
     border-radius: 25px;
 }
 
+.signIn{
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 15px;
+    background-color: #5F9EA0;
+    transition: ease-in-out .5s;
+}
 
+.signIn:focus{
+    outline:none;
+}
 
+.signIn:hover{
+    transition: ease-in-out .5s;
+    background-color: #6facae;
+}
+
+.signUp{
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 15px;
+    background-color: #0047AB;
+    transition: ease-in-out .5s;
+}
+
+.signUp:focus{
+    outline:none;
+}
+
+.signUp:hover{
+    transition: ease-in-out .5s;
+    background-color: #0356c9;
+}

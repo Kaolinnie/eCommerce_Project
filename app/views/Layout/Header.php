@@ -17,8 +17,8 @@
                 echo "<a href='\Account\logout'><img src='/resources/images/logout.png' alt='' style='filter:invert(100%);-webkit-filter:invert(100%);'></a>";
             }
             else {
-                echo  "<button type='button' class='btn btn-light signIn' onclick=\"location.href='/Account/login'\">Sign In</button>";
-                echo  "<button type='button' class='btn btn-primary signUp' onclick=\"location.href='/Account/register'\">Sign Up</button>";
+                echo  "<button type='button' class='signIn' onclick=\"location.href='/Account/login'\">Sign In</button>";
+                echo  "<button type='button' class='signUp' onclick=\"location.href='/Account/register'\">Sign Up</button>";
             }
             ?>
         </div>
