@@ -31,7 +31,10 @@
             <span class='line line2'></span>
             <span class='line line3'></span>
         </div>
-        <button onclick="test()">click me</button>
+        <div class="addressChangeDiv" onclick="openSubview()">
+            <img class="location_icon" src="/resources/images/location.png" alt="">
+            Change Address
+        </div>
         <a href='/' class="logo_link"><img src="/resources/images/logo.png" alt="logo"></a>
         <a href='#' class="checkout_link fixed_header"><img src="/resources/images/checkout.png" alt="checkout"></a>
     </div>

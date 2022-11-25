@@ -54,4 +54,12 @@ class Account extends \app\core\Controller {
     public function profile(){
         $this->view('Account/profile');
     }
+
+    public function changeAddress(){
+        $currentUser = new \app\models\User();
+        $currentUser = $currentUser->get($_SESSION["email"]);
+        $currentUser->address= $this->validate_input($_GET['address']);
+        $currentUser->suite= $this->validate_input($_GET['suite']);
+        $currentUser->updateAddress();
+    }
 }
