@@ -36,8 +36,13 @@
             <?php
             if(isset($_SESSION['deliverTo'])) {
                 $address = $_SESSION['deliverTo'];
-                echo $address;
-            } else echo "Set address";
+                if($address) echo $address;
+                else {
+                    echo "Set Address";
+                }
+            } else {
+                echo "Set Address";
+            }
             ?>
         </div>
         <a href='/' class="logo_link"><img src="/resources/images/logo.png" alt="logo"></a>
