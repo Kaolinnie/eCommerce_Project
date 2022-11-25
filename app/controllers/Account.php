@@ -35,7 +35,11 @@ class Account extends \app\core\Controller {
 				//correct password provided
 				$_SESSION['email'] = $currentUser->email;
 				$_SESSION['user_id'] = $currentUser->user_id;
-                $_SESSION['deliverTo'] = $currentUser->address;
+                $_SESSION['deliverTo'] = "$currentUser->user_address";
+                $suite = $currentUser->user_suite;
+                if($suite) {
+                    $_SESSION['deliverTo'] = $_SESSION['deliverTo'] . " Suite $suite";
+                }
 				header("location:/");
             }else{
 				//incorrect password provided

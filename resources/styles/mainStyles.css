@@ -266,7 +266,7 @@ footer {
 .addressChangeDiv{
     display: flex;
     justify-content: space-around;
-    width: 200px;
+    width: 400px;
     position: fixed;
     background-color: #d3d3d3;
     border-radius: 25px;

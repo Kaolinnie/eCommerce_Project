@@ -33,7 +33,12 @@
         </div>
         <div class="addressChangeDiv" onclick="openSubview()">
             <img class="location_icon" src="/resources/images/location.png" alt="">
-            Change Address
+            <?php
+            if(isset($_SESSION['deliverTo'])) {
+                $address = $_SESSION['deliverTo'];
+                echo $address;
+            } else echo "Set address";
+            ?>
         </div>
         <a href='/' class="logo_link"><img src="/resources/images/logo.png" alt="logo"></a>
         <a href='#' class="checkout_link fixed_header"><img src="/resources/images/checkout.png" alt="checkout"></a>
