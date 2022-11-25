@@ -31,8 +31,9 @@
             <span class='line line2'></span>
             <span class='line line3'></span>
         </div>
-        <div class="addressChangeDiv" onclick="openSubview()">
+        <div class="addressChangeDiv" onclick="openSubview()" type="button">
             <img class="location_icon" src="/resources/images/location.png" alt="">
+            <span id='location_text'>
             <?php
             if(isset($_SESSION['deliverTo'])) {
                 $address = $_SESSION['deliverTo'];
@@ -44,6 +45,7 @@
                 echo "Set Address";
             }
             ?>
+            </span>
         </div>
         <a href='/' class="logo_link"><img src="/resources/images/logo.png" alt="logo"></a>
         <a href='#' class="checkout_link fixed_header"><img src="/resources/images/checkout.png" alt="checkout"></a>

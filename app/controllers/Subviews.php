@@ -11,12 +11,12 @@ class Subviews extends \app\core\Controller{
            <h2>Current Address</h2>
            <p>$address</p>
            <h2>Change Address for Order</h2>
-           <form onsubmit='updateAddress()'>
+           <form>
            <label>Address</label>
            <input type='text' class='inputs' id='address_input' required></br>
            <label>Apartment</label>
            <input type='text' class='inputs' id='suite_input' placeholder=' Optional'>
-           <input class='submitButton submitAddressChange' type='submit' value='Change'>
+           <input class='submitButton submitAddressChange' type='button' onclick='updateAddress()' value='Change'>
            </form>
            </div>";
         } else {
@@ -26,12 +26,12 @@ class Subviews extends \app\core\Controller{
             <h2>Current Address</h2>
         
             <h2>Change Address for Order</h2>
-            <form onsubmit='updateAddress()'>
+            <form>
             <label>Address</label>
             <input type='text' class='inputs' id='address_input' required></br>
             <label>Apartment</label>
             <input type='text' class='inputs' id='suite_input' placeholder=' Optional'>
-            <input class='submitButton submitAddressChange' type='submit' value='Change'>
+            <input class='submitButton submitAddressChange' type='button' onclick='updateAddress' value='Change'>
             </form>
             </div>";
         }

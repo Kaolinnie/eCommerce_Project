@@ -24,8 +24,8 @@ function updateAddress() {
         url: "/Account/changeAddress",
         type: "get",
         data: {"address":address,"suite":suite},
-        success: function(){
-            alert("success")
+        success: function(data){
+            $("#location_text").text(data);
         }
     })
 }
