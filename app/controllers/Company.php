@@ -4,7 +4,6 @@ namespace app\controllers;
 class Company extends \app\core\Controller {
     public function index() {
         if(isset($_POST['action'])) {
-
             $company_owner = $_POST['company_owner_name_input'];
             $company_name = $_POST['company_name_input'];
             $company_email = $_POST['company_email_input'];
@@ -24,7 +23,6 @@ class Company extends \app\core\Controller {
             $this->view('Main/index');
         } else {
             $this->view('Company/index');
-
         } 
     }
 

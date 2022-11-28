@@ -21,4 +21,6 @@ class User extends \app\core\Model {
         $STMT = self::$_connection->prepare($SQL);
         $STMT->execute(["user_address"=>$this->address, "user_suite"=>$this->user_suite, "user_id"=>$this->user_id]);
     }
+
+    
 }

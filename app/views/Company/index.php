@@ -19,11 +19,28 @@
             <label>Company Address<input type="text" name="company_address_input" required></label><br>
             <label>Company Suite <input type="text" name="company_suite_input" placeholder="(Optional)"></label><br>
             <label>Postal Code <input type="text" name="company_postal_code_input" required></label><br>
-            <input class="submitButton btn btn-primary" type="submit" value="Register" name="action">
+            <input class="submitButton btn btn-primary" type="submit" value="Register" name="action" onsubmit="sendEmail()">
         </form>
         <p>Please note that this is only a request, you will receive an email confirmation when our team approves your company page!</p>
     </main>
     <?php $this->view('Layout/Scripts'); ?>
     <script src="/resources/scripts/main.js"></script>
+    
+    </script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "feistyethan@gmail.com",
+            Password : "892D1056050E14C39C19B5513DEF2D3C600D",
+            To : 'feistyethan1@gmail.com',
+            From : document.getElementById("company_email_input").value,
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+        message => alert(message)
+        );
+    }
+    </script>
 </body>
 </html>
