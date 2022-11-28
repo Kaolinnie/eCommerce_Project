@@ -11,4 +11,7 @@ class Main extends \app\core\Controller {
     public function faq() {
         $this->view('Main/Faq');
     }
+    public function redirectMcdonald(){
+        $this->view('Company/CompanyPages/mcdonalds.php');
+    }
 }

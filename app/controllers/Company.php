@@ -27,4 +27,8 @@ class Company extends \app\core\Controller {
 
         } 
     }
+
+    public function redirectMcdonald(){
+        $this->view('Company/CompanyPages/mcdonalds');
+    }
 }

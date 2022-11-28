@@ -17,7 +17,7 @@
         <main>
             <div class="business_page">
                 <div class="content_box">
-                    <div onclick="location.href=''">
+                    <div onclick="location.href='/Company/redirectMcdonald'">
                         <img class="business_img" src="images/page_header_image/mcdonalds.webp" alt="">
                         <h2>McDonalds</h2>
                         <h3>$4.49 Delivery Fee | 10-25min</h3>
