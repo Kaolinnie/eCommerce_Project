@@ -54,11 +54,25 @@ footer {
 }
 
 .address_box {
+    display: flex;
     position:relative;
-    height: 5rem;
+    height: 3rem;
     border-radius: 1rem;
     background-color: rgba(234, 234, 234, 0.41);
-    padding: 2rem;
+    justify-content: space-evenly;
+}
+
+.address_box_content {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2rem;
+}
+
+.location_icon_hamburger {
+    position: absolute;
+    left: 5px;
+    width: auto;
+    height: 1.5rem;
 }
 
 .location_icon {
@@ -349,4 +363,19 @@ footer {
 .signUp:hover{
     transition: ease-in-out .5s;
     background-color: #0356c9;
+}
+
+.content_box{
+    width: 400px;
+    height: auto;
+}
+
+.content_box h3{
+    font-size: 1.1em;
+    opacity: 50%;
+}
+
+.business_img {
+    width: 400px;
+    height: auto;
 }

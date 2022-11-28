@@ -36,9 +36,10 @@ class Account extends \app\core\Controller {
 				$_SESSION['email'] = $currentUser->email;
 				$_SESSION['user_id'] = $currentUser->user_id;
                 $_SESSION['deliverTo'] = "$currentUser->user_address";
+                $_SESSION['firstName'] = "$currentUser->first_name";
                 $suite = $currentUser->user_suite;
                 if($suite) {
-                    $_SESSION['deliverTo'] = $_SESSION['deliverTo'] . " Suite $suite";
+                    $_SESSION['deliverTo'] = $_SESSION['deliverTo'] . " Suite $suite" ;
                 }
 				header("location:/");
             }else{

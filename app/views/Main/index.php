@@ -15,10 +15,18 @@
     <div id="content">
         <?php $this->view('Layout/Header'); ?>
         <main>
+            <div class="business_page">
+                <div class="content_box">
+                    <div onclick="location.href=''">
+                        <img class="business_img" src="images/page_header_image/mcdonalds.webp" alt="">
+                        <h2>McDonalds</h2>
+                        <h3>$4.49 Delivery Fee | 10-25min</h3>
+                    </div>
+                </div>
+            </div>
             <h2>Would you like to order some delicious food from your favourite store?</h2>
             <h3>Click here to enter your address:</h3>
             <button class="btn btn-primary" onclick="location.href='/Main/address'">Click me</button>
-            <!-- <div class='card-deck brief_pages'></div> -->
         <div class="cloudBox">
             <h2>Want to start a business?</h2>
             <h3>Click here to register yours now:</h3>

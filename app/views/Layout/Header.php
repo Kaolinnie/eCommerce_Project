@@ -2,13 +2,27 @@
     <div id="menunav">
         <div class="profile_div">
             <a href="" class="profile_pic"><img src="/images/page_header_image/pizza.jpg" alt=""></a>
-            <span class="profile_name">Welcome, Kaolin</span>
+            <span class="profile_name">Welcome 
+                <?php 
+                    if(isset($_SESSION['firstName'])){
+                        $firstname = $_SESSION['firstName'];
+                        if($firstname) echo $firstname;
+                    } else {
+                        echo "";
+                    }
+                ?> 
+             </span>
         </div>
         <div class="address_box">
-            <img class="location_icon" src="/resources/images/location.png" alt="">
-            <span class="road">264 Boulevard Saint-Francis</span>
-            <span class="city">Chateauguay</span>
-            <span class="province">Quebec</span>
+            <div class="address_box_content">
+            <img class="location_icon_hamburger" src="/resources/images/location.png" alt="">
+            <?php
+            if(isset($_SESSION['deliverTo'])) {
+                $address = $_SESSION['deliverTo'];
+                if($address) echo $address;
+            }
+           ?>
+           </div>
         </div>
         <div id="account">
             <?php
