@@ -26,21 +26,6 @@
     <?php $this->view('Layout/Scripts'); ?>
     <script src="/resources/scripts/main.js"></script>
     
-    </script>
-    <script>
-        function sendEmail(){
-            Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "feistyethan@gmail.com",
-            Password : "892D1056050E14C39C19B5513DEF2D3C600D",
-            To : 'feistyethan1@gmail.com',
-            From : document.getElementById("company_email_input").value,
-            Subject : "This is the subject",
-            Body : "And this is the body"
-        }).then(
-        message => alert(message)
-        );
-    }
-    </script>
+    
 </body>
 </html>

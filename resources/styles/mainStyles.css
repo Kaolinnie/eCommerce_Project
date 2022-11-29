@@ -432,3 +432,7 @@ footer {
     padding: 0px;
     margin: 25px;
 }
+
+.gridItem:hover{
+    cursor: pointer;
+}
