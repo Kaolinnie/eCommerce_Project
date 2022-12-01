@@ -4,15 +4,17 @@ function openSubview(){
         type: "get",
         data: {},
         success: function(data){
+            $("#subviews").removeClass("hideSubview");
             $("#subviews").append(data);
             $("#subviews").addClass("open");
-            $("#content").addClass("noevents");
+            $("#content").addClass("noevents");   
             console.log("success");
         }
     })
 }
 
 function closeSubview(){
+    $("#subviews").addClass("hideSubview");
     $("#subviews").children().remove();
     $("#content").removeClass("noevents");
 }

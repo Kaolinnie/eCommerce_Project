@@ -11,16 +11,16 @@
 <body>
     <?php $this->view('Layout/Header'); ?>
     <div class="banner_frame">
-        <img class="banner_img" src="/images/page_header_image/mcdonaldsbanner.jpeg" alt="">
+        <img class="banner_img" src="/images/page_header_image/<?=$data->company_banner?>" alt="">
     </div>
     <div class="business_content">
-        <h1>McDonald's</h1>
-        <h2>10–25 min • $4.49 Delivery Fee + $2-4 Service Fee</h2>
+        <h1><?=$data->company_name?></h1>
+        <h2><?=$data->deliveryDetails?></h2>
     </div>
     <div class="products">
-        <div class="eggmcmuffin">
-            <img class="product_img" src="/images/page_header_image/eggmcmuffin.jpeg" alt="">
-            <h2>Trio Œuf McMuffin [450.0 Cal] <br>$8.27</h2>
+        <h3>Items</h3>
+        <div class="">
+            <!-- We need to implement the foreign key for the products here -->
         </div>
     </div>
     <?php $this->view('Layout/Scripts'); ?>

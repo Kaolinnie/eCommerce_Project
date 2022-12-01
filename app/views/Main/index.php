@@ -9,7 +9,7 @@
     <title>Home</title>
 </head>
 <body>
-    <div id="subviews">
+    <div id="subviews" class="hideSubview">
 
     </div>
     <div id="content">

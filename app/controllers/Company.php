@@ -26,7 +26,9 @@ class Company extends \app\core\Controller {
         } 
     }
 
-    public function redirectMcdonald(){
-        $this->view('Company/CompanyPages/mcdonalds');
+    public function redirectCompany($page_id){
+        $page = new \app\models\Page();
+        $page = $page->get($page_id);
+        $this->view('Company/CompanyPages/companyPage',$page);
     }
 }
