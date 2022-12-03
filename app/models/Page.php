@@ -22,6 +22,6 @@ class Page extends \app\core\Model {
         $STMT = self::$_connection->prepare($SQL);
         $STMT->execute(["page_id"=>$page_id]);
         $STMT->setFetchMode(\PDO::FETCH_CLASS,'\app\models\Page');
-        return $STMT->fetch();
+        return $STMT->fetchAll();
     }
 }

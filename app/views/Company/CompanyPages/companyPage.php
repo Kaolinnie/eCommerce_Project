@@ -18,8 +18,8 @@
         <h2><?=$data['page']->deliveryDetails?></h2>
     </div>
     <div class="products">
-        <h3>Items</h3>
-        <div class="productGrid">
+        <h3>Products</h3>
+        <div class="layoutGrid">
         <?php $this->view('Layout/ProductBrief',  $data['product']); ?>
         </div>
     </div>
