@@ -432,7 +432,7 @@ footer {
 }
 
 .gridItem:hover{
-    transition: ease-in .5s;
+    transition: ease-in .3s;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
