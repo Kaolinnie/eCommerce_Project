@@ -13,7 +13,7 @@
                 ?> 
              </span>
         </div>
-        <div class="address_box">
+        <div class="address_box" onclick="location.href=''">
             <div class="address_box_content">
             <img class="location_icon_hamburger" src="/resources/images/location.png" alt="">
             <?php

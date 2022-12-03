@@ -11,16 +11,16 @@
 <body>
     <?php $this->view('Layout/Header'); ?>
     <div class="banner_frame">
-        <img class="banner_img" src="/images/page_header_image/<?=$data->company_banner?>" alt="">
+        <img class="banner_img" src="/images/page_header_image/<?=$data['page']->company_banner?>" alt="">
     </div>
     <div class="business_content">
-        <h1><?=$data->company_name?></h1>
-        <h2><?=$data->deliveryDetails?></h2>
+        <h1><?=$data['page']->company_name?></h1>
+        <h2><?=$data['page']->deliveryDetails?></h2>
     </div>
     <div class="products">
         <h3>Items</h3>
-        <div class="">
-            <!-- We need to implement the foreign key for the products here -->
+        <div class="productGrid">
+        <?php $this->view('Layout/ProductBrief',  $data['product']); ?>
         </div>
     </div>
     <?php $this->view('Layout/Scripts'); ?>

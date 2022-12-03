@@ -29,6 +29,7 @@ class Company extends \app\core\Controller {
     public function redirectCompany($page_id){
         $page = new \app\models\Page();
         $page = $page->get($page_id);
-        $this->view('Company/CompanyPages/companyPage',$page);
+        $products = $page->getProducts($page_id);
+        $this->view('Company/CompanyPages/companyPage', ['page'=>$page,'product'=>$products]);
     }
 }
