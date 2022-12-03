@@ -56,8 +56,14 @@ INSERT INTO `administrator` (`administrator_id`, `email`, `phone_number`, `passw
 
 CREATE TABLE `company` (
   `company_id` int(11) NOT NULL,
+  `company_owner` varchar(50) NOT NULL,
   `company_name` varchar(50) NOT NULL,
-  `company_logo` varchar(50) NOT NULL
+  `company_email` varchar(50) NOT NULL,
+  `company_address` varchar(50) NOT NULL,
+  `company_suite` varchar(50) NOT NULL,
+  `company_postalCode` varchar(50) NOT NULL,
+  `company_logo` varchar(50) NOT NULL,
+  `company_banner` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -71,23 +77,22 @@ CREATE TABLE `page` (
   `page_name` varchar(30) NOT NULL,
   `page_creator` int(11) NOT NULL,
   `date_created` date NOT NULL,
-  `page_header` varchar(50) NOT NULL,
-  `page_rating` decimal(3,1) DEFAULT NULL,
-  `number_of_ratings` int(11) NOT NULL DEFAULT 0
+  `page_banner` varchar(50) NOT NULL,
+  `deliveryDetails` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `page`
 --
 
-INSERT INTO `page` (`page_id`, `page_name`, `page_creator`, `date_created`, `page_header`, `page_rating`, `number_of_ratings`) VALUES
-(1, 'La Fee Des Gateries', 1, '2022-10-30', 'lafeedesgateriesheader.jpg', NULL, 0),
-(2, 'TrollTunga', 1, '2022-10-30', 'trolltunga.jpg', NULL, 0),
-(3, 'Pizza', 1, '2022-10-30', 'pizza.jpg', NULL, 0),
-(4, 'Restaurant', 1, '2022-10-30', 'restaurant-header.jpg', NULL, 0),
-(5, 'McDonalds', 1, '2022-10-30', 'mcdonalds.jpg', NULL, 0),
-(6, 'Pizza Hut', 1, '2022-10-30', 'pp_pizzahut_header.png', NULL, 0),
-(7, 'Pizza Pizza', 1, '2022-10-30', 'pizzapizza.png', NULL, 0);
+INSERT INTO `page` (`page_id`, `page_name`, `page_creator`, `date_created`, `page_banner`) VALUES
+(1, 'La Fee Des Gateries', 1, '2022-10-30', 'lafeedesgateriesheader.jpg'),
+(2, 'TrollTunga', 1, '2022-10-30', 'trolltunga.jpg'),
+(3, 'Pizza', 1, '2022-10-30', 'pizza.jpg'),
+(4, 'Restaurant', 1, '2022-10-30', 'restaurant-header.jpg'),
+(5, 'McDonalds', 1, '2022-10-30', 'mcdonalds.jpg'),
+(6, 'Pizza Hut', 1, '2022-10-30', 'pp_pizzahut_header.png'),
+(7, 'Pizza Pizza', 1, '2022-10-30', 'pizzapizza.png');
 
 -- --------------------------------------------------------
 
@@ -119,6 +124,7 @@ CREATE TABLE `product` (
   `product_id` int(11) NOT NULL,
   `product_name` varchar(25) NOT NULL,
   `product_price` decimal(4,2) NOT NULL,
+  `product_image` varchar(50) NOT NULL,
   `product_store_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

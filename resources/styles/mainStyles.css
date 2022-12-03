@@ -368,8 +368,9 @@ footer {
 }
 
 .content_box{
-    width: 400px;
-    height: auto;
+    width: 100%;
+    display:flex;
+    justify-content: center;
 }
 
 .content_box h3{
@@ -401,7 +402,6 @@ footer {
     font-size: 1.1em;
     opacity: 50%;
 }
-
 .products {
     margin-top: 1rem;
     margin-left: 1rem;
@@ -419,18 +419,22 @@ footer {
 }
 
 .layoutGrid {
-    margin: 0px !important;
-    display: inline-grid;
+    margin: 0;
+    display: grid;
     grid-template-columns: auto auto auto;
 }
 
 .gridItem{
-    padding: 0px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding: 8px;
     margin: 25px;
 }
 
 .gridItem:hover{
+    transition: ease-in .5s;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .hideSubview {
@@ -438,6 +442,7 @@ footer {
 }
 
 .company_product_img {
-    height: 200px;
-    width: auto;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
 }
