@@ -12,6 +12,9 @@
     <div id="subviews" class="hideSubview">
 
     </div>
+    <div id="subviewCart" class="hideSubview">
+
+    </div>
     <div id="content">
         <?php $this->view('Layout/Header'); ?>
         <main>

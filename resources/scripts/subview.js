@@ -19,6 +19,26 @@ function closeSubview(){
     $("#content").removeClass("noevents");
 }
 
+function openCartSubview(){
+    $.ajax({
+        url: "/Subviews/openCartSubview",
+        type: "get",
+        data: {},
+        success: function(data){
+            $("#subviewCart").removeClass("hideSubview");
+            $("#subviewCart").append(data);
+            $("#subviewCart").addClass("open");
+            $("#content").addClass("noevents");  
+        }
+    })
+}
+
+function closeCartSubview(){
+    $("#subviewCart").addClass("hideSubview");
+    $("#subviewCart").children().remove();
+    $("#content").removeClass("noevents");
+}
+
 function updateAddress() {
     address = $("#address_input").val()
     suite = $("#suite_input").val()

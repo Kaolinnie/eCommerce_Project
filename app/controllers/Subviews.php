@@ -36,4 +36,12 @@ class Subviews extends \app\core\Controller{
             </div>";
         }
     }
+
+    public function openCartSubview(){
+           echo "<div id='cartSubview'>
+            <img onclick='closeCartSubview()' id='closeSubviewImg' src='/resources/images/xCloseButtonIcon.png'>
+            <span> Cart </span>
+            
+           </div>";
+    }
 }

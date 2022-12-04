@@ -62,7 +62,7 @@
             </span>
         </div>
         <a href='/' class="logo_link"><img src="/resources/images/logo.png" alt="logo"></a>
-        <a href='#' class="checkout_link fixed_header"><img src="/resources/images/checkout.png" alt="checkout"></a>
+        <a type="button" class="checkout_link fixed_header"><img src="/resources/images/checkout.png" alt="checkout"  onclick="openCartSubview() "></a>
     </div>
 
 </header>

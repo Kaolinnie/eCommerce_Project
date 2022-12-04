@@ -10,9 +10,11 @@
     padding: 0;
     color: var(--main-text-colour-dark);
 }
+
 html {
     width: 100vw;
 }
+
 body {
     position: relative;
     width: 100%;
@@ -20,6 +22,7 @@ body {
     min-height: 100vh;
     background-color: whitesmoke;
 }
+
 main {
     padding-left: 5.3vw;
     padding-right: 5.3vw;
@@ -285,6 +288,22 @@ footer {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+#subviewCart {
+    z-index: 1;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 300px;
+}
+
+#subviewCart > div {
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, rgba(228,228,228,1) 0%, rgba(255,255,255,1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 .addressChangeDiv{
     display: flex;
     justify-content: space-around;
@@ -455,13 +474,16 @@ footer {
 }
 
 .addCart_button{
-    font-weight: bold;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    font-weight: bold;
     position: absolute;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    margin-top: 5px;
+    margin-top: 5px; 
+    margin-bottom: 5px;
     margin-left: 315px;
 }
 
@@ -485,4 +507,11 @@ footer {
     margin: 5px;
     width: 365px;
     height: auto;
+}
+
+#cartSubview {
+    width: 400px;
+    height: auto;
+    float: right;
+    right: 0;
 }
