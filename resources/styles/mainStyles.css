@@ -96,8 +96,11 @@ footer {
     height: 10vh;
     width: 100%;
     display:flex;
+    position: fixed;
+    top:0;
     align-items: center;
     justify-content: center;
+    background-color:rgba(0, 0, 0, 0.25);
 }
 .fixed_header {
     position:fixed;
@@ -120,6 +123,9 @@ footer {
 .checkout_link {
     position: fixed;
     right: 1rem;
+}
+.checkout_link img {
+    filter:brightness(0) invert(1);
 }
 .hamburger.open {
     left: 12rem;
@@ -147,7 +153,7 @@ footer {
     transition: .2s ease-in-out;
 }
 .hamburger .line {
-    background:var(--main-text-colour-dark);
+    background: white;
     display: block;
     position: absolute;
     height: 20%;
@@ -381,8 +387,8 @@ footer {
 /* Business Page */
 
 .business_img {
-    width: 400px;
-    height: 300px;
+    width: 350px;
+    height: 250px;
 }
 
 .banner_img {
@@ -419,7 +425,7 @@ footer {
 }
 
 .layoutGrid {
-    margin: 0;
+    margin-top:  50px;
     display: grid;
     grid-template-columns: auto auto auto;
 }
@@ -428,7 +434,7 @@ footer {
     background-color: whitesmoke;
     border-radius: 4px;
     padding: 8px;
-    margin: 25px;
+    margin: 20px;
 }
 
 .gridItem:hover{
@@ -442,7 +448,41 @@ footer {
 }
 
 .company_product_img {
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     object-fit: cover;
+    border-radius: 5px;
+}
+
+.addCart_button{
+    font-weight: bold;
+    justify-content: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 315px;
+}
+
+.productLayoutGrid{
+    margin-top: 5px;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto;
+}
+
+.productGridItem:hover{
+    transition: ease-in .3s;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.productGridItem {
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 5px;
+    width: 365px;
+    height: auto;
 }

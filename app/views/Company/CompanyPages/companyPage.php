@@ -10,17 +10,19 @@
 </head>
 <body>
     <?php $this->view('Layout/Header'); ?>
-    <div class="banner_frame">
-        <img class="banner_img" src="/images/page_header_image/<?=$data['page']->company_banner?>" alt="">
-    </div>
-    <div class="business_content">
-        <h1><?=$data['page']->company_name?></h1>
-        <h2><?=$data['page']->deliveryDetails?></h2>
-    </div>
-    <div class="products">
-        <h3>Products</h3>
-        <div class="layoutGrid">
-        <?php $this->view('Layout/ProductBrief',  $data['product']); ?>
+    <div class="companyContent">
+        <div class="banner_frame">
+            <img class="banner_img" src="/images/page_header_image/<?=$data['page']->company_banner?>" alt="">
+        </div>
+        <div class="business_content">
+            <h1><?=$data['page']->company_name?></h1>
+            <h2><?=$data['page']->deliveryDetails?></h2>
+        </div>
+        <div class="products">
+            <h3>Products</h3>
+            <div class="productLayoutGrid">
+                <?php $this->view('Layout/ProductBrief',  $data['product']); ?>
+            </div>
         </div>
     </div>
     <?php $this->view('Layout/Scripts'); ?>
