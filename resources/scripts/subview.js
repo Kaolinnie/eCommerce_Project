@@ -20,17 +20,9 @@ function closeSubview(){
 }
 
 function openCartSubview(){
-    $.ajax({
-        url: "/Subviews/openCartSubview",
-        type: "get",
-        data: {},
-        success: function(data){
-            $("#subviewCart").removeClass("hideSubview");
-            $("#subviewCart").append(data);
-            $("#subviewCart").addClass("open");
-            $("#content").addClass("noevents");  
-        }
-    })
+    $("#subviewCart").removeClass("hideSubview");
+    $("#subviewCart").addClass("open");
+    $("#content").addClass("noevents");  
 }
 
 function closeCartSubview(){
@@ -50,4 +42,8 @@ function updateAddress() {
             $("#location_text").text(data);
         }
     })
+}
+
+function addItemToCart(product_id){
+
 }

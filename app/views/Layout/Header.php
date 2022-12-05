@@ -45,6 +45,20 @@
             <span class='line line2'></span>
             <span class='line line3'></span>
         </div>
+
+        <div id='cartSubview' class="hideSubview">
+                 <img onclick='closeCartSubview()' id='closeSubviewImg' src='/resources/images/xCloseButtonIcon.png'>
+                    <div id='cartSubviewContent'>
+                        <span id='cartText'> Cart </span>
+                    </div>
+                    <h2>Delivering to: $address</h2>
+                    <h2>Your items</h2>
+                    <div id='productsAdded'>
+                    
+                    </div>
+                <button id='checkoutButton'> Checkout </button>
+        </div>
+
         <div class="addressChangeDiv" onclick="openSubview()" type="button">
             <img class="location_icon" src="/resources/images/location.png" alt="">
             <span id='location_text'>

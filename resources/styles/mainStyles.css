@@ -487,6 +487,10 @@ footer {
     margin-left: 315px;
 }
 
+.addCart_button:hover{
+    color: blue;
+}
+
 .productLayoutGrid{
     margin-top: 5px;
     display: grid;
@@ -514,4 +518,19 @@ footer {
     height: auto;
     float: right;
     right: 0;
+}
+
+#cartSubviewContent {
+    position: absolute;
+    top: 12px;
+    margin-left: 120px;
+    font-size: 24px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#checkoutButton {
+    position: absolute;
+    bottom: 5px;
 }

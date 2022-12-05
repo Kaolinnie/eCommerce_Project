@@ -13,7 +13,21 @@
 
     </div>
     <div id="subviewCart" class="hideSubview">
-
+    <div id='cartSubview'>
+                 <img onclick='closeCartSubview()' id='closeSubviewImg' src='/resources/images/xCloseButtonIcon.png'>
+                    <div id='cartSubviewContent'>
+                        <span id='cartText'> Cart </span>
+                    </div>
+                    <h2>Delivering to: <?php 
+                        $address = $_SESSION['deliverTo'];
+                        echo "$address"
+                        ?></h2>
+                    <h2>Your items</h2>
+                    <div id='productsAdded'>
+                        
+                    </div>
+                <button id='checkoutButton'> Checkout </button>
+        </div>
     </div>
     <div id="content">
         <?php $this->view('Layout/Header'); ?>
