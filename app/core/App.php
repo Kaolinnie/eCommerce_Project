@@ -30,7 +30,7 @@ class App{
 		$classAttributes = $reflection->getAttributes();
 		$methodAttributes = $reflection->getMethod($this->method)->getAttributes();
 
-		$attributes = array_values(array_merge($classAttributes,$methodAttributes));
+        $attributes = array_values(array_merge($classAttributes,$methodAttributes));
 
 		foreach($attributes as $attribute) {
 			$filter = $attribute->newInstance();
@@ -39,7 +39,8 @@ class App{
 			}
 		}
 		$params = $url ? array_values($url) : [];
-		call_user_func_array([ $this->controller, $this->method ], $params);
+        $_SESSION['cart'] = array();
+        call_user_func_array([ $this->controller, $this->method ], $params);
 	}
 
 	public static function parseUrl(){

@@ -6,29 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php $this->view('Layout/HeadLinks');?>
     <link rel="stylesheet" href="/resources/styles/registerStyles.css">
-    <title>Account</title>
+    <title><?=_("Account")?></title>
 </head>
 <body>
-    <?php $this->view('Layout/Header'); ?>
-    <main>
+<?php $this->view('Layout/Menu'); ?>
+    <div id="content">
+        <?php $this->view('Layout/Header'); ?>
+        <main>
+            <h2><?=_("Create account")?></h2>
 
-        <h2>Create account</h2>
-        
-        <form action='' method="post">
-            <label>Email</label><input type="email" name="email_input" required>
-            <label>Password</label><input type="password" name="password_input" required>
-            <input class="submitButton btn btn-primary" type="submit" value="Login" name="action">
-        </form>
-        <?php 
+            <form action='' method="post">
+                <label><?=_("Email")?></label><input type="email" name="email_input" required>
+                <label><?=_("Password")?></label><input type="password" name="password_input" required>
+                <button class="submitButton btn btn-primary" type="submit" name="action"><?=_("Login")?></button>
+            </form>
+            <?php
             if(isset($_GET['error'])) {
                 $error = $_GET['error'];
                 echo "<div class='alert alert-danger' role='alert'>
-                    <span>$error</span>
-                </div>";
-        } ?>
-    </main>
-
-    <?php $this->view('Layout/Footer');?>
+                        <span>$error</span>
+                    </div>";
+            } ?>
+        </main>
+        <?php $this->view('Layout/Footer');?>
+    </div>
     <?php $this->view('Layout/Scripts');?>
 </body>
 </html>

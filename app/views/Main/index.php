@@ -6,29 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php $this->view('Layout/HeadLinks');?>
     <link rel="stylesheet" href="/resources/styles/homeStyles.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="/resources/styles/companyStyles.css">
+    <title><?=_("Home")?></title>
 </head>
 <body>
-    <div id="subviews" class="hideSubview">
+<!--    <div id="subviews" class="hideSubview">-->
+<!---->
+<!--    </div>-->
+    <?php $this->view('Layout/Menu'); ?>
 
-    </div>
-    <div id="subviewCart" class="hideSubview">
-    <div id='cartSubview'>
-                 <img onclick='closeCartSubview()' id='closeSubviewImg' src='/resources/images/xCloseButtonIcon.png'>
-                    <div id='cartSubviewContent'>
-                        <span id='cartText'> Cart </span>
-                    </div>
-                    <h2>Delivering to: <?php 
-                        $address = $_SESSION['deliverTo'];
-                        echo "$address"
-                        ?></h2>
-                    <h2>Your items</h2>
-                    <div id='productsAdded'>
-                        
-                    </div>
-                <button id='checkoutButton'> Checkout </button>
-        </div>
-    </div>
     <div id="content">
         <?php $this->view('Layout/Header'); ?>
         <main>
@@ -39,21 +25,17 @@
                     </div>
                 </div>
             </div>
-            <h2>Would you like to order some delicious food from your favourite store?</h2>
-            <h3>Click here to enter your address:</h3>
-            <button class="btn btn-primary" onclick="location.href='/Main/address'">Click me</button>
-        <div class="cloudBox">
-            <h2>Want to start a business?</h2>
-            <h3>Click here to register yours now:</h3>
-            <button class="btn btn-primary" onclick="location.href='/Company/index'">Click me</button>
-        </div>
-            <h2>Here's some random text</h2>
+            <h2><?=_("Would you like to order some delicious food from your favourite store?")?></h2>
+            <h3><?=_("Click here to enter your address")?>:</h3>
+            <button class="btn btn-primary" onclick="location.href='/Main/address'"><?=_("Click me")?></button>
+            <div class="cloudBox">
+                <h2><?=_("Want to start a business?")?></h2>
+                <h3><?=_("Click here to register yours now")?>:</h3>
+                <button class="btn btn-primary" onclick="location.href='/Company/index'"><?=_("Click me")?></button>
+            </div>
         </main>
         <?php $this->view('Layout/Footer');?>
     </div>
-    
     <?php $this->view('Layout/Scripts');?>
-    <script src="/resources/scripts/main.js"></script>
-   
 </body>
 </html>

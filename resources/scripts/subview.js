@@ -43,7 +43,3 @@ function updateAddress() {
         }
     })
 }
-
-function addItemToCart(product_id){
-
-}

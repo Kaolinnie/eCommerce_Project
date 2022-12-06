@@ -1,0 +1,109 @@
+/* Business Page */
+
+.business_img {
+    width: 350px;
+    height: 250px;
+}
+
+.banner_img {
+    border-top: solid 2px;
+    width: 100%;
+    height: 200px;
+    object-fit:cover;
+}
+
+.business_content {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.business_content h2 {
+    font-size: 1.1em;
+    opacity: 50%;
+}
+.products {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.product_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.products h2{
+    font-size: 1.1em;
+    opacity: 50%;
+}
+
+.layoutGrid {
+    margin-top:  50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.gridItem{
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 20px;
+}
+
+.gridItem:hover{
+    transition: ease-in .3s;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.hideSubview {
+    display: none;
+}
+
+.company_product_img {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.addCart_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 315px;
+}
+
+.addCart_button:hover{
+    color: blue;
+}
+
+.productLayoutGrid{
+    margin-top: 5px;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto;
+}
+
+.productGridItem:hover{
+    transition: ease-in .3s;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.productGridItem {
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 5px;
+    width: 365px;
+    height: auto;
+}

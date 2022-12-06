@@ -33,6 +33,7 @@ class Account extends \app\core\Controller {
 			$currentUser = $currentUser->get($currentEmailInput);
             if(password_verify($passwordInput , $currentUser->password)){
 				//correct password provided
+                $_SESSION['profile_pic'] = $currentUser->profile_pic;
 				$_SESSION['email'] = $currentUser->email;
 				$_SESSION['user_id'] = $currentUser->user_id;
                 $_SESSION['deliverTo'] = "$currentUser->user_address";

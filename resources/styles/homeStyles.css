@@ -40,3 +40,15 @@
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
 }
+
+
+.content_box{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+.content_box h3{
+    font-size: 1.1em;
+    opacity: 50%;
+}

@@ -13,13 +13,27 @@ function startOrderWithAddress() {
 
 $(document).ready(function(){
     $('.hamburger').click(function(){
-        $(this).toggleClass('open');
         $("#menunav").toggleClass('open');
     });
+    $('.checkout_link').click(function(){
+        $("#cartSubview").toggleClass('open');
+    });
+    $("#closeSubviewImg").click(function() {
+        $("#cartSubview").removeClass('open');
+    })
     $("main").click(function(){
-        $('.hamburger').removeClass('open');
         $('#menunav').removeClass('open');
+        $('#cartSubview').removeClass('open');
     });
 });
-
+function addItemToCart(product_id){
+    $.ajax({
+        url:'/Checkout/addToCart/'+product_id,
+        type:'POST',
+        data:{},
+        success: function(data) {
+            $("#productsAdded").append(data);
+        }
+    });
+}
 
