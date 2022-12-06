@@ -26,6 +26,7 @@ $(document).ready(function(){
         $('#cartSubview').removeClass('open');
     });
 });
+
 function addItemToCart(product_id){
     $.ajax({
         url:'/Checkout/addToCart/'+product_id,

@@ -39,7 +39,7 @@ class App{
 			}
 		}
 		$params = $url ? array_values($url) : [];
-        $_SESSION['cart'] = array();
+        $_SESSION['cart'] = array([]);
         call_user_func_array([ $this->controller, $this->method ], $params);
 	}
 
@@ -52,6 +52,4 @@ class App{
 				,FILTER_SANITIZE_URL);
 		}
 	}
-
-
 }
