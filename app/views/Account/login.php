@@ -5,21 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php $this->view('Layout/HeadLinks');?>
-    <link rel="stylesheet" href="/resources/styles/registerStyles.css">
+    <link rel="stylesheet" href="/resources/styles/login.css">
     <title><?=_("Account")?></title>
 </head>
 <body>
-<?php $this->view('Layout/Menu'); ?>
-    <div id="content">
-        <?php $this->view('Layout/Header'); ?>
+    <div class="content">
         <main>
-            <h2><?=_("Create account")?></h2>
-
+            <div class="form">
+            <h2><?=_("Login")?></h2>
             <form action='' method="post">
-                <label><?=_("Email")?></label><input type="email" name="email_input" required>
-                <label><?=_("Password")?></label><input type="password" name="password_input" required>
-                <button class="submitButton btn btn-primary" type="submit" name="action"><?=_("Login")?></button>
+                <input type="email" name="email_input" placeholder="Email" required><br>
+                <input type="password" name="password_input"  placeholder="Password"required><br>
+                <button class="submitButton btn btn-primary" type="submit" name="action"><?=_("Login")?></button><br>
+                <a class="redirectLink" href="/Account/register">Don't have an account? Sign up!</a>
             </form>
+            </div>
+            <div class="logoForm">
+
+            
             <?php
             if(isset($_GET['error'])) {
                 $error = $_GET['error'];
@@ -28,8 +31,10 @@
                     </div>";
             } ?>
         </main>
-        <?php $this->view('Layout/Footer');?>
+        </div>
+        </div>
     </div>
     <?php $this->view('Layout/Scripts');?>
+    
 </body>
 </html>

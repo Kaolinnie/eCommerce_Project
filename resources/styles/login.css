@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    overflow: hidden;
+}
+
+body{
+    background: rgb(255,198,81);
+    background: linear-gradient(90deg, rgba(255,198,81,1) 35%, rgba(255,77,0,1) 100%);
+}
+
+input {
+    width: 80%;
+    background-color: #D3D3D3;
+    padding: 5px;
+    padding-left: 10px;
+    border: none;
+    margin: 10px;
+}
+
+input:focus {
+    background-color: #D3D3D3;
+    border: none;
+    outline: none;
+}
+
+h2{
+    padding: 15px;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.content {
+    margin-top: 90px;
+    justify-content: center;
+    text-align: center;
+}
+
+.form {
+    opacity: 0.9;
+    height: 420px;
+    width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+}
+
+.submitButton{
+    border: 0;
+    margin-top: 100px;
+    width: 80%;
+    background: rgb(139,240,255);
+    background: linear-gradient(63deg, rgba(139,240,255,1) 12%, rgba(0,30,255,1) 100%);
+    margin-bottom: 15px;
+}
+
+a:hover {
+    text-decoration: none;
+}
