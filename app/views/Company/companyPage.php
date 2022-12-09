@@ -11,7 +11,7 @@
 </head>
 <body>
 <?php $this->view('Layout/Menu'); ?>
-
+<div id="subviews"></div>
 <div id="content">
     <?php $this->view('Layout/Header'); ?>
     <main>
