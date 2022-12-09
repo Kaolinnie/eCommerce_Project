@@ -13,4 +13,19 @@ class Checkout extends \app\core\Controller
     public function viewCart() {
         $this->view('Layout/CartProduct');
     }
+    public function clearCart() {
+        $_SESSION['cart'] = [];
+    }
+    public function removeFromCart($product_id) {
+        unset($_SESSION['cart'][$product_id]);
+        $this->view('Layout/CartProduct');
+    }
+    public function removeOne($product_id) {
+        $_SESSION['cart'][$product_id]--;
+        $this->view('Layout/CartProduct');
+    }
+    public function addOne($product_id) {
+        $_SESSION['cart'][$product_id]++;
+        $this->view('Layout/CartProduct');
+    }
 }

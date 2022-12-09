@@ -46,16 +46,22 @@
 <div id='cartSubview'>
     <a type="button" class="checkout_link"><img src="/resources/images/checkout.png" alt="checkout"></a>
 
-    <img id='closeSubviewImg' src='/resources/images/xCloseButtonIcon.png'>
-    <div id='cartSubviewContent'>
+    <div class="actions">
+        <img src='/resources/images/xCloseButtonIcon.png' onclick="closeCart()">
         <span id='cartText'><?=_("Cart")?></span>
+        <img src='/resources/images/clear.png' onclick="clearCart()">
     </div>
-    <h2><?=_("Delivering to ")?> <?= $_SESSION['deliverTo'] ?? "Nowhere" ?></h2>
-    <h2><?=_("Items")?></h2>
+    <hr>
+    <div class="location">
+        <img src="/resources/images/location.png" style='width: 25px; height: 25px;' alt="">
+        <span style="font-size:0.8em;"><?= $_SESSION['deliverTo'] ?? "Nowhere" ?></span>
+    </div>
+    <hr>
+    <h4><?=_("Items")?></h4>
     <div id="productsAdded">
         <?php
             $this->view('Layout/CartProduct');
         ?>
     </div>
-    <button id='checkoutButton' class="btn btn-warning"><?=_("Checkout")?></button>
+
 </div>

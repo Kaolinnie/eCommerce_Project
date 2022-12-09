@@ -10,7 +10,6 @@
 </head>
 <body>
     <div class="content">
-    <main>
         <div class="form">
         <?php 
             if(isset($_GET['error'])) {
@@ -30,7 +29,6 @@
             <input class="submitButton btn btn-primary" type="submit" value="Register" name="action"><br>
             <a class="redirectLink" href="/Account/login">Have an account already? Login here!</a>
         </form>
-    </main>
     </div>
     </div>
     <?php $this->view('Layout/Scripts');?>

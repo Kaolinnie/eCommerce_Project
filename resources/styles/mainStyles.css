@@ -300,10 +300,6 @@ footer {
     left: 15vh;
 }
 
-#closeSubviewImg:hover{
-    cursor: pointer;
-}
-
 .noevents {
     pointer-events: none;
 }
@@ -383,6 +379,8 @@ footer {
     height: 100vh;
     right: -20vw;
     padding: 5vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #cartSubviewContent {
@@ -391,7 +389,94 @@ footer {
     justify-content: center;
 }
 
-#checkoutButton {
+
+#clearCartBtn:hover {
+    cursor:pointer;
+}
+.actions img:hover {
+    cursor: pointer;
+}
+.actions img {
+    width: 25px;
+    height: 25px;
+}
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#productsAdded {
+    display:flex;
+    row-gap: 1vh;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+.checkout_item {
+    display: flex;
+    position: relative;
+    height: 15vh;
+    border-bottom: 1px lightgrey solid;
+}
+.checkout_item_img {
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    float:right;
+
+}
+.quantityDiv {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    margin-right: 5%;
+}
+.quantityDiv img {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border:none;
+}
+.quantityDiv img:hover {
+    cursor: pointer;
+}
+.quantityDiv span {
+    font-size: 1.05em;
+}
+.checkout_item_text {
+    position: relative;
+    flex-grow:1;
+}
+.checkout_price {
+    font-weight: bold;
+    font-size: 1em;
+}
+.checkout_item_bottom {
     position: absolute;
-    bottom: 5px;
+    bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    height: 16%;
+    width: 100%;
+}
+.checkout_item_top {
+    display: flex;
+    justify-content: space-between;
+    height: 16%;
+    width: 100%;
+}
+.pointer:hover {
+    cursor: pointer;
+}
+.checkout_actions {
+    width:80%;
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 5%;
 }
