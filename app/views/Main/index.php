@@ -10,9 +10,9 @@
     <title><?=_("Home")?></title>
 </head>
 <body>
-<!--    <div id="subviews" class="hideSubview">-->
-<!---->
-<!--    </div>-->
+   <div id="subviews" class="hideSubview">
+
+  </div>
     <?php $this->view('Layout/Menu'); ?>
 
     <div id="content">

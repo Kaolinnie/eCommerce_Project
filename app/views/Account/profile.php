@@ -9,6 +9,7 @@
     <title>Home</title>
 </head>
 <body>
+<?php $this->view('Layout/Menu'); ?>
     <?php $this->view('Layout/Header'); ?>
     <main>
         <div class="squareCloudBox">

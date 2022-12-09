@@ -9,8 +9,9 @@
     <title>Account</title>
 </head>
 <body>
-    <?php $this->view('Layout/Header'); ?>
+    <div class="content">
     <main>
+        <div class="form">
         <?php 
             if(isset($_GET['error'])) {
                 $error = $_GET['error'];
@@ -21,16 +22,17 @@
         <h2>Create account</h2>
 
         <form action='' method="post">
-            <label>Email</label><input type="email" name="email_input" required>
-            <label>Password</label><input type="password" name="password_input" required>
-            <label>Confirm Password</label><input type="password" name="confirm_password_input" required>
-            <label>First Name</label><input type="text" name="first_name_input" required>
-            <label>Last Name</label><input type="text" name="last_name_input" required>
-            <input class="submitButton btn btn-primary" type="submit" value="Register" name="action">
+            <input type="email" name="email_input" placeholder="Email" required>
+            <input type="password" name="password_input" placeholder="Password" required>
+            <input type="password" name="confirm_password_input" placeholder="Confirm Password" required>
+            <input type="text" name="first_name_input"  placeholder="First name"required>
+            <input type="text" name="last_name_input" placeholder="Last name" required>
+            <input class="submitButton btn btn-primary" type="submit" value="Register" name="action"><br>
+            <a class="redirectLink" href="/Account/login">Have an account already? Login here!</a>
         </form>
     </main>
-
-    <?php $this->view('Layout/Footer');?>
+    </div>
+    </div>
     <?php $this->view('Layout/Scripts');?>
 </body>
 </html>
