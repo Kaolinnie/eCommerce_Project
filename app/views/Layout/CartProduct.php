@@ -2,10 +2,11 @@
 $product = new \app\models\Product();
 $total_checkout_price = 0;
 $checkout_text = _('Checkout');
+
 foreach($_SESSION['cart'] as $product_id => $quantity) {
     $item = $product->getProduct($product_id);
-    $total_checkout_price+=$item->product_price*$quantity;
     if($item) {
+        $total_checkout_price+=$item->product_price*$quantity;
         $total_price = $item->product_price * $quantity;
         echo "
             <div class='checkout_item'>
@@ -34,4 +35,3 @@ echo "<div class='checkout_actions'>
     <span>Total: $$total_checkout_price</span>
     <button id='checkoutButton' class='btn btn-warning'>$checkout_text</button>
     </div>";
-?>
