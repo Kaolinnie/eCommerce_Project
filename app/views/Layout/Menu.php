@@ -54,16 +54,7 @@
     <h2><?=_("Items")?></h2>
     <div id="productsAdded">
         <?php
-        $size = sizeof($_SESSION['cart']);
-        echo "<span>$size</span>";
-//        if(sizeof($_SESSION['cart'])>0) {
-            foreach($_SESSION['cart'] as $index) {
-                $product = new \app\models\Product();
-                $item = $product->getProduct($index);
-                $this->view('Layout/CartProduct',$item);
-            }
-//        }
-
+            $this->view('Layout/CartProduct');
         ?>
     </div>
     <button id='checkoutButton' class="btn btn-warning"><?=_("Checkout")?></button>

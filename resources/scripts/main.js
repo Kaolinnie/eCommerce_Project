@@ -33,6 +33,7 @@ function addItemToCart(product_id){
         type:'POST',
         data:{},
         success: function(data) {
+            $("#productsAdded").empty();
             $("#productsAdded").append(data);
         }
     });
