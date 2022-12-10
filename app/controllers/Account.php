@@ -77,4 +77,11 @@ class Account extends \app\core\Controller {
         }
         echo $_SESSION['deliverTo'];
     }
+
+    public function updateUser(){
+        $currentUser = new \app\models\User();
+        $currentUser->user_id = $_SESSION['user_id'];
+        $currentUser->first_name = $this->validate_input($_GET['address']);
+    }
 }
+

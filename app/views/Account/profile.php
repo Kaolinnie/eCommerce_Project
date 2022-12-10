@@ -28,7 +28,6 @@
                         </tr>
                 </tbody>
             </table>
-
             <label for="">Email</label><br>
             <input type="text" value="<?= $_SESSION['email']?>"><br>
             <label for="">Address</label><br>

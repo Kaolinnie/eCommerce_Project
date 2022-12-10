@@ -74,10 +74,11 @@ CREATE TABLE `company` (
 
 CREATE TABLE `page` (
   `page_id` int(11) NOT NULL,
-  `page_name` varchar(30) NOT NULL,
+  `company_name` varchar(30) NOT NULL,
   `page_creator` int(11) NOT NULL,
   `date_created` date NOT NULL,
-  `page_banner` varchar(50) NOT NULL,
+  `company_logo` varchar(50) NOT NULL,
+  `company_banner` varchar(50) NOT NULL,
   `deliveryDetails` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -85,14 +86,12 @@ CREATE TABLE `page` (
 -- Dumping data for table `page`
 --
 
-INSERT INTO `page` (`page_id`, `page_name`, `page_creator`, `date_created`, `page_banner`) VALUES
-(1, 'La Fee Des Gateries', 1, '2022-10-30', 'lafeedesgateriesheader.jpg'),
-(2, 'TrollTunga', 1, '2022-10-30', 'trolltunga.jpg'),
-(3, 'Pizza', 1, '2022-10-30', 'pizza.jpg'),
-(4, 'Restaurant', 1, '2022-10-30', 'restaurant-header.jpg'),
-(5, 'McDonalds', 1, '2022-10-30', 'mcdonalds.jpg'),
-(6, 'Pizza Hut', 1, '2022-10-30', 'pp_pizzahut_header.png'),
-(7, 'Pizza Pizza', 1, '2022-10-30', 'pizzapizza.png');
+INSERT INTO `page` (`page_id`, `page_name`, `page_creator`, `date_created`, `company_logo`, `company_banner`,  `deliveryDetails`) VALUES
+(1, 'La Fee Des Gateries', 1, '2022-10-30', 'lafeedesgateriesheader.jpg', 'cakeFairyBanner.jpg',  '$3.39 Delivery Fee | Delivery Time on Request'),
+(2, 'Pizza', 1, '2022-10-30', 'pizza.jpg', 'pizza.jpg',  '$3.39 Delivery Fee | 15-25 Delivery Time'),
+(3, 'Restaurant', 1, '2022-10-30', 'restaurant-header.jpg', 'restaurant-header.jpg', '$4.99 Delivery Fee | 15-25 Delivery Time'),
+(4, 'McDonalds', 1, '2022-10-30', 'mcdonalds.jpg', 'mcdonaldsbanner.webp','$3.99 Delivery Fee | 15-25 Delivery Time'),
+(5, 'Pizza Pizza', 1, '2022-10-30', 'pizzapizzalogo.png', 'pizzapizza.png',  '$2.99 Delivery Fee | 15-25 Delivery Time');
 
 -- --------------------------------------------------------
 
@@ -192,15 +191,19 @@ CREATE TABLE `user` (
   `password` varchar(72) NOT NULL,
   `first_name` varchar(20) NOT NULL,
   `last_name` varchar(20) NOT NULL,
-  `profile_pic` varchar(50) DEFAULT NULL
+  `profile_pic` varchar(50) DEFAULT NULL,
+  `user_address` varchar(50) DEFAULT NULL,
+  `user_suite` varchar(50) DEFAULT NULL
+  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `email`, `password`, `first_name`, `last_name`, `profile_pic`) VALUES
-(1, 'kaolin.stacey@gmail.com', '$2y$10$UhS4VgZyEGdKLoTeANp1hecRO3haErGoA7e5AbLcDqvw43elKxPvW', 'Kaolin', 'Stacey', NULL);
+INSERT INTO `user` (`user_id`, `email`, `password`, `first_name`, `last_name`, `profile_pic`,  `user_address`, `user_suite`) VALUES
+(1, 'kaolin.stacey@gmail.com', '$2y$10$UhS4VgZyEGdKLoTeANp1hecRO3haErGoA7e5AbLcDqvw43elKxPvW', 'Kaolin', 'Stacey', NULL, '264 Boulevard Sainte Francis', '8'),
+(2, 'feistyethan@gmail.com', '$2y$10$Qkt8OdahihIH24qVxbEvmOoluRoL7p1.kLzcscF70HU1gkh7Ew7Sy', 'Eris', 'Degani', NULL, '264 Boulevard Sainte Francis', '8');
 
 --
 -- Indexes for dumped tables
