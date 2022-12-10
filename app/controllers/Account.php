@@ -38,6 +38,7 @@ class Account extends \app\core\Controller {
 				$_SESSION['user_id'] = $currentUser->user_id;
                 $_SESSION['deliverTo'] = "$currentUser->user_address";
                 $_SESSION['firstName'] = "$currentUser->first_name";
+                $_SESSION['lastName'] = "$currentUser->last_name";
                 $suite = $currentUser->user_suite;
                 if($suite) {
                     $_SESSION['deliverTo'] = $_SESSION['deliverTo'] . " Suite $suite" ;
