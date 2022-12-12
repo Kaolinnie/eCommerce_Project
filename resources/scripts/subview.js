@@ -1,14 +1,13 @@
 function openSubview(){
     $.ajax({
-        url: "/Subviews/openSubview",
+        url: "/Subviews/addAddressView",
         type: "get",
         data: {},
         success: function(data){
             $("#subviews").removeClass("hideSubview");
             $("#subviews").append(data);
             $("#subviews").addClass("open");
-            $("#content").addClass("noevents");   
-            console.log("success");
+            $("#content").addClass("noevents");
         }
     })
 }
@@ -35,8 +34,8 @@ function updateAddress() {
     address = $("#address_input").val()
     suite = $("#suite_input").val()
     $.ajax({
-        url: "/Account/changeAddress",
-        type: "get",
+        url: "/Account/addAddress",
+        type: "post",
         data: {"address":address,"suite":suite},
         success: function(data){
             $("#location_text").text(data);

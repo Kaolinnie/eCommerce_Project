@@ -61,6 +61,16 @@ class Account extends \app\core\Controller {
         $this->view('Account/profile');
     }
 
+    public function addAddress() {
+        $address = $this->validate_input($_POST['address']);
+        $suite = $this->validate_input($_POST['suite']);
+        $_SESSION['deliverTo'] = $address;
+        if($suite) {
+            $_SESSION['deliverTo'] = $_SESSION['deliverTo'] . " Suite $suite" ;
+        }
+        return $_SESSION['deliverTo'];
+    }
+
     public function changeAddress(){
         $currentUser = new \app\models\User();
         $currentUser->user_id = $_SESSION['user_id'];
@@ -75,5 +85,9 @@ class Account extends \app\core\Controller {
             $_SESSION['deliverTo'] = $_SESSION['deliverTo'] . " Suite $suite";
         }
         echo $_SESSION['deliverTo'];
+    }
+    public function terminate() {
+        session_destroy();
+        header('location:/');
     }
 }

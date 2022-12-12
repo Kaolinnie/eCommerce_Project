@@ -26,6 +26,7 @@ class Company extends \app\core\Controller {
         } 
     }
 
+    #[\app\filters\address]
     public function Page($page_id){
         $page = new \app\models\Page();
         $page = $page->get($page_id);

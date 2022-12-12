@@ -40,6 +40,7 @@
             echo  "<button type='button' class='signUp' onclick=\"location.href='/Account/register'\">Sign Up</button>";
         }
         ?>
+        <button type='button' class='signUp' onclick="location.href='/Account/terminate'">Terminate</button>
     </div>
 </div>
 

@@ -2,6 +2,9 @@
 namespace app\controllers;
 
 class Subviews extends \app\core\Controller{
+    public function addAddressView() {
+        $this->view('Layout/Subviews/address');
+    }
     public function openSubview(){
         if(isset($_SESSION['deliverTo'])) {
            $address = $_SESSION['deliverTo'];
