@@ -38,6 +38,7 @@ class Account extends \app\core\Controller {
 				$_SESSION['user_id'] = $currentUser->user_id;
                 $_SESSION['deliverTo'] = "$currentUser->user_address";
                 $_SESSION['firstName'] = "$currentUser->first_name";
+                $_SESSION['lastName'] = "$currentUser->last_name";
                 $suite = $currentUser->user_suite;
                 if($suite) {
                     $_SESSION['deliverTo'] = $_SESSION['deliverTo'] . " Suite $suite" ;
@@ -89,5 +90,10 @@ class Account extends \app\core\Controller {
     public function terminate() {
         session_destroy();
         header('location:/');
+    }
+    public function updateUser(){
+        $currentUser = new \app\models\User();
+        $currentUser->user_id = $_SESSION['user_id'];
+        $currentUser->first_name = $this->validate_input($_GET['address']);
     }
 }

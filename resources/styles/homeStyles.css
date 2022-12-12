@@ -52,3 +52,43 @@
     font-size: 1.1em;
     opacity: 50%;
 }
+
+.nameSpacing {
+    margin-left: 50px;
+    margin-right: 5px;
+}
+
+th, td {
+    padding-right: 5px;
+}
+
+
+input {
+    margin-right: 5px;
+    width: 100%;
+    background-color: #D3D3D3;
+    padding: 5px 5px 5px 10px;
+    border: none;
+}
+
+input:focus {
+    background-color: #D3D3D3;
+    border: none;
+    outline: none;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.name {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.form {
+    width: 500px;
+}

@@ -14,7 +14,6 @@
 
   </div>
     <?php $this->view('Layout/Menu'); ?>
-
     <div id="content">
         <?php $this->view('Layout/Header'); ?>
         <main>

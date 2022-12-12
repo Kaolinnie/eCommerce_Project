@@ -10,7 +10,6 @@
 </head>
 <body>
     <div class="content">
-        <main>
             <div class="form">
             <h2><?=_("Login")?></h2>
             <form action='' method="post">
@@ -21,8 +20,6 @@
             </form>
             </div>
             <div class="logoForm">
-
-            
             <?php
             if(isset($_GET['error'])) {
                 $error = $_GET['error'];
@@ -30,8 +27,6 @@
                         <span>$error</span>
                     </div>";
             } ?>
-        </main>
-        </div>
         </div>
     </div>
     <?php $this->view('Layout/Scripts');?>
