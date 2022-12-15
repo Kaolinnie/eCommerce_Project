@@ -10,6 +10,7 @@ class Checkout extends \app\core\Controller
         } else $_SESSION['cart'][$product_id] = 1;
         $this->viewCart();
     }
+
     public function viewCart() {
         $this->view('Layout/CartProduct');
     }
@@ -27,5 +28,12 @@ class Checkout extends \app\core\Controller
     public function addOne($product_id) {
         $_SESSION['cart'][$product_id]++;
         $this->view('Layout/CartProduct');
+    }
+    public function getStore() {
+        if(isset($_SESSION['storeCart'])) echo $_SESSION['storeCart'];
+        else echo "null";
+    }
+    public function checkout() {
+        $this->view('Main/checkout');
     }
 }

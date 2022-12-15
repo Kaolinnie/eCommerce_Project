@@ -75,8 +75,8 @@ class Account extends \app\core\Controller {
     public function changeAddress(){
         $currentUser = new \app\models\User();
         $currentUser->user_id = $_SESSION['user_id'];
-        $currentUser->address= $this->validate_input($_GET['address']);
-        $currentUser->user_suite= $this->validate_input($_GET['suite']);
+        $currentUser->address= $this->validate_input($_POST['address']);
+        $currentUser->user_suite= $this->validate_input($_POST['suite']);
         $currentUser->updateAddress();
         $currentUser = $currentUser->get($_SESSION["email"]);
 
@@ -95,5 +95,20 @@ class Account extends \app\core\Controller {
         $currentUser = new \app\models\User();
         $currentUser->user_id = $_SESSION['user_id'];
         $currentUser->first_name = $this->validate_input($_GET['address']);
+    }
+    public function address() {
+        if(isset($_SESSION['user_id'])) {
+            $this->changeAddress();
+        } else {
+            $address = $this->validate_input($_POST['address']);
+            $suite = $this->validate_input($_POST['suite']);
+
+            $_SESSION['deliverTo'] = "$address";
+            if($suite) {
+                $_SESSION['deliverTo'] = $_SESSION['deliverTo'] . " Suite $suite";
+            }
+            echo $_SESSION['deliverTo'];
+        }
+
     }
 }

@@ -11,9 +11,7 @@
 </head>
 <body>
 <?php $this->view('Layout/Menu'); ?>
-<div id="subviews"></div>
 <div id="content">
-    <?php $this->view('Layout/Header'); ?>
     <main>
         <div class="companyContent">
             <div class="banner_frame">

@@ -1,44 +1,36 @@
 function openSubview(){
-    $.ajax({
-        url: "/Subviews/addAddressView",
-        type: "get",
-        data: {},
-        success: function(data){
-            $("#subviews").removeClass("hideSubview");
-            $("#subviews").append(data);
-            $("#subviews").addClass("open");
-            $("#content").addClass("noevents");
+    $.confirm({
+        title: 'Address',
+        content: "<form>" +
+            "<input type='text' class='form-control' id='address_input' required placeholder=' Address'></br><br>" +
+            "<input type='text' class='form-control' id='suite_input' placeholder=' Suite (optional)'>" +
+            "</form>",
+        theme: 'Modern',
+        closeAnimation: 'scale',
+        closeIcon: true,
+        buttons: {
+            change: function() {
+                address = $("#address_input").val();
+                if(address==="") {
+                    $.alert({
+                        title: 'Address required!',
+                        content: 'Please input your address',
+                        type: 'red',
+                        typeAnimated: true
+                    })
+                    return false;
+                }
+                suite = $("#suite_input").val();
+                $.ajax({
+                    url: "/Account/address",
+                    type: "post",
+                    data: {"address":address,"suite":suite},
+                    success: function(data){
+                        $("#location_text").text(data)
+                    }
+                })
+            }
         }
-    })
-}
+    });
 
-function closeSubview(){
-    $("#subviews").addClass("hideSubview");
-    $("#subviews").children().remove();
-    $("#content").removeClass("noevents");
-}
-
-function openCartSubview(){
-    $("#subviewCart").removeClass("hideSubview");
-    $("#subviewCart").addClass("open");
-    $("#content").addClass("noevents");  
-}
-
-function closeCartSubview(){
-    $("#subviewCart").addClass("hideSubview");
-    $("#subviewCart").children().remove();
-    $("#content").removeClass("noevents");
-}
-
-function updateAddress() {
-    address = $("#address_input").val()
-    suite = $("#suite_input").val()
-    $.ajax({
-        url: "/Account/addAddress",
-        type: "post",
-        data: {"address":address,"suite":suite},
-        success: function(data){
-            $("#location_text").text(data);
-        }
-    })
 }

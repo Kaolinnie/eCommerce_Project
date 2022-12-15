@@ -7,7 +7,7 @@ class address extends \app\core\AccessFilter {
         if(isset($_SESSION['deliverTo'])&&$_SESSION['deliverTo']!="") {
             return false;
         } else {
-            header('location:/?error=address necessary');
+            header('location:/Account/address');
             return true;
         }
     }

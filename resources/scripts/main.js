@@ -99,7 +99,6 @@ function removeOne(product_id) {
             }
         });
     }
-
 }
 function addOne(product_id) {
     $.ajax({
@@ -111,3 +110,69 @@ function addOne(product_id) {
         }
     });
 }
+
+function redirectToStore(page_id){
+    $.ajax({
+        url:'/Checkout/getStore',
+        type:'get',
+        data: {},
+        success: function(data) {
+            if(data==="null") {
+                location.href="/Company/Page/"+page_id;
+            } else if(parseInt(page_id)===parseInt(data)) {
+                location.href="/Company/Page/"+page_id;
+            } else {
+                $.ajax({
+                    url:'/Company/getPageName/'+data,
+                    type:'get',
+                    data: {},
+                    success: function(storeName) {
+                        $.confirm({
+                            title:'Continue?',
+                            content: 'You already have a transaction going on with '+storeName+'.<br>Clear your cart and start over?',
+                            closeIcon: true,
+                            theme:'Modern',
+                            buttons: {
+                                confirm: function() {
+                                    location.href='/Company/Page/'+parseInt(page_id);
+                                },
+                                cancel: function(){}
+                            }
+                        })
+                    }
+                })
+            }
+        }
+    })
+}
+
+function confirmCheckout() {
+    $.confirm({
+        title: 'Checkout',
+        content: 'Are you ready to checkout?',
+        theme:'Modern',
+        buttons: {
+            confirm: function(){
+                location.href="/Checkout/checkout"
+            },
+            cancel: function(){}
+        }
+    })
+}
+
+
+
+//background
+$(document).ready(function() {
+
+    var html = '';
+    for (var i = 1; i <= 50; i ++) {
+        html += '<div class="shape-container--'+i+' shape-animation"><div class="random-shape"></div></div>';
+    }
+
+    document.querySelector('.shape').innerHTML += html;
+
+    var $allShapes = $("[class*='shape-container--']");
+});
+
+

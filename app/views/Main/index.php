@@ -10,12 +10,8 @@
     <title><?=_("Home")?></title>
 </head>
 <body>
-   <div id="subviews" class="hideSubview">
-
-  </div>
     <?php $this->view('Layout/Menu'); ?>
     <div id="content">
-        <?php $this->view('Layout/Header'); ?>
         <main>
             <div class="business_page">
                 <div class="content_box">

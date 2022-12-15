@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import "background.css";
+
+
 :root {
     --main-text-colour-dark: #002756;
     --main-bg:#d7d7d7;
@@ -23,10 +26,10 @@ body {
     background-color: whitesmoke;
 }
 
-main {
-    padding-top: 7vh;
-    padding-bottom: 7vh;
-}
+/*main {*/
+/*    padding-top: 7vh;*/
+/*    padding-bottom: 7vh;*/
+/*}*/
 
 footer {
     width: 100%;
@@ -59,11 +62,14 @@ footer {
     display: flex;
     position:relative;
     height: 3rem;
+    width: 80%;
     border-radius: 1rem;
-    background-color: rgba(234, 234, 234, 0.41);
+    background-color: rgba(177, 101, 43, 0.5);
     justify-content: space-evenly;
 }
-
+.address_box:hover {
+    cursor: pointer;
+}
 .address_box_content {
     margin-top: auto;
     margin-bottom: auto;
@@ -87,10 +93,10 @@ footer {
 
 #account {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: absolute;
     bottom: 0.5rem;
-
+    width: 100%;
 }
 
 #topmenu {
@@ -193,7 +199,7 @@ footer {
 
 #menunav {
     padding: 10vh 10px;
-    background-color: #cbafe5;
+    background: rgba(237, 222, 206, 0.9);
     height: 100vh;
     position:fixed;
     width: 20vw;
@@ -270,10 +276,6 @@ footer {
     height: 470px;
     background: linear-gradient(-45deg, rgba(228,228,228,1) 0%, rgba(255,255,255,1) 100%);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-form{
-    height: 300px;
 }
 
 #subviewCart {

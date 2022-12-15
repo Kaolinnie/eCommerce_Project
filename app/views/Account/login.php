@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php $this->view('Layout/HeadLinks');?>
     <link rel="stylesheet" href="/resources/styles/login.css">
+    <link rel="stylesheet" href="/resources/styles/background.css">
     <title><?=_("Account")?></title>
 </head>
 <body>
+<?php $this->view('Layout/Header'); ?>
+
     <div class="content">
             <div class="form">
             <h2><?=_("Login")?></h2>

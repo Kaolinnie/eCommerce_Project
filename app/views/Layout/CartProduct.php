@@ -33,5 +33,5 @@ foreach($_SESSION['cart'] as $product_id => $quantity) {
     }
 echo "<div class='checkout_actions'>
     <span>Total: $$total_checkout_price</span>
-    <button id='checkoutButton' class='btn btn-warning'>$checkout_text</button>
+    <button id='checkoutButton' class='btn btn-warning' onclick='confirmCheckout()'>$checkout_text</button>
     </div>";

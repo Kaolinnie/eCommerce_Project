@@ -63,19 +63,19 @@ th, td {
 }
 
 
-input {
-    margin-right: 5px;
-    width: 100%;
-    background-color: #D3D3D3;
-    padding: 5px 5px 5px 10px;
-    border: none;
-}
+/*input {*/
+/*    margin-right: 5px;*/
+/*    width: 100%;*/
+/*    background-color: #D3D3D3;*/
+/*    padding: 5px 5px 5px 10px;*/
+/*    border: none;*/
+/*}*/
 
-input:focus {
-    background-color: #D3D3D3;
-    border: none;
-    outline: none;
-}
+/*input:focus {*/
+/*    background-color: #D3D3D3;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*}*/
 
 .content {
     display: flex;

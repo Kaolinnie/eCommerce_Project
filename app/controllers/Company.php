@@ -30,7 +30,15 @@ class Company extends \app\core\Controller {
     public function Page($page_id){
         $page = new \app\models\Page();
         $page = $page->get($page_id);
+        $_SESSION['cart'] = array([]);
+        $_SESSION['storeCart'] = $page->page_id;
         $products = $page->getProducts($page_id);
         $this->view('Company/companyPage', ['page'=>$page,'product'=>$products]);
+    }
+
+    public function getPageName($page_id) {
+        $page = new \app\models\Page();
+        $page = $page->get($page_id);
+        echo $page->company_name;
     }
 }
