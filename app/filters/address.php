@@ -7,7 +7,8 @@ class address extends \app\core\AccessFilter {
         if(isset($_SESSION['deliverTo'])&&$_SESSION['deliverTo']!="") {
             return false;
         } else {
-            header('location:/Account/address');
+            $error=_('Address is not set, go into the left side menu to set it');
+            header("location:/?error=$error");
             return true;
         }
     }

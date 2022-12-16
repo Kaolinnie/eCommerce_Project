@@ -19,13 +19,11 @@
             <label><?=_("Company Address")?><input type="text" name="company_address_input" required></label><br>
             <label><?=_("Company Suite")?><input type="text" name="company_suite_input" placeholder="<?=_("(Optional)")?>"></label><br>
             <label><?=_("Postal Code")?><input type="text" name="company_postal_code_input" required></label><br>
-            <input class="submitButton btn btn-primary" type="submit" value="Register" name="action" onsubmit="sendEmail()">
+            <input class="submitButton btn btn-primary" type="submit" value="Register" name="action" onsubmit="index()">
         </form>
         <p><?=_("Please note that this is only a request, you will receive an email confirmation when our team approves your company page!")?></p>
     </main>
     <?php $this->view('Layout/Scripts'); ?>
     <script src="/resources/scripts/main.js"></script>
-    
-    
 </body>
 </html>

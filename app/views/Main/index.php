@@ -11,6 +11,7 @@
 </head>
 <body>
     <?php $this->view('Layout/Menu'); ?>
+
     <div id="content">
         <main>
             <div class="business_page">
@@ -31,6 +32,12 @@
         </main>
         <?php $this->view('Layout/Footer');?>
     </div>
+    <?php
+        if(isset($_GET['error'])) {
+            $err = $_GET['error'];
+            echo "<input type='hidden' value='$err' id='errorMessage'>";
+        }
+    ?>
     <?php $this->view('Layout/Scripts');?>
 </body>
 </html>
