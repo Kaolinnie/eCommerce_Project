@@ -7,30 +7,45 @@
     <?php $this->view('Layout/HeadLinks');?>
     <link rel="stylesheet" href="/resources/styles/background.css">
     <link rel="stylesheet" href="/resources/styles/profile.css">
-    <link rel="stylesheet" href="/resources/styles/login.css">
     <title><?=_("Profile")?></title>
 </head>
 <body>
 <?php $this->view('Layout/Header'); ?>
 <main>
+    <div class="content">
     <div class="outerbox">
-        <h2>What payments methods do we take?</h2>
-        <h3>Resto-To-Door takes 3 payments methods, Debit Card, Credit Card and Cash</h3><br>
+        <h1>My Profile</h1>
+        <form action="">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" value=<?= $_SESSION['firstName']??''?>>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" value=<?= $_SESSION['lastName']??''?>>
+            </div>
+            </div>
 
-        <h2>Is this service really free?</h2>
-        <h3>Yes it is! All orders are free as a part of our kickstarter!</h3><br>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" value=<?= $_SESSION['email']??''?>>
+            </div>
+    
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" value="<?= $_SESSION['deliverTo']??''?>">
+            </div>
 
-        <h2>My order was incorrect what can I do?</h2>
-        <h3>As a part of our service, we give credit based on any items that are wrong or missing from your order!</h3><br>
-
-        <h2>Why is this a better option then other food delivery services?</h2>
-        <h3>Everything we do is done to the utmost care, and absolutely free for our customers!</h3><br>
-
-        <h2>How can I make recommendations?</h2>
-        <h3>Unfortunately its a feature that isn't implemented yet! We are working on it!</h3>
-        <br>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Change Profile Picture</label>
+            </div>
+        </form>     
         <a href="/Main/index"><h3 style="text-align: center;">Back to main page</h3></a>
     </div>
+    </div>
+   
 
 
 </main>
