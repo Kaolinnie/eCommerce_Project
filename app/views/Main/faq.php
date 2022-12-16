@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php $this->view('Layout/HeadLinks');?>
-    <link rel="stylesheet" href="/resources/styles/homeStyles.css">
     <link rel="stylesheet" href="/resources/styles/faqstyle.css">
     <title>FAQ</title>
 </head>
@@ -29,8 +28,6 @@
         <br>
         <a href="/Main/index"><h3 style="text-align: center;">Back to main page</h3></a>
         </div>
-        
-
     </main>
 
     <?php $this->view('Layout/Scripts');?>

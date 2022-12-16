@@ -21,9 +21,6 @@
                     </div>
                 </div>
             </div>
-            <h2><?=_("Would you like to order some delicious food from your favourite store?")?></h2>
-            <h3><?=_("Click here to enter your address")?>:</h3>
-            <button class="btn btn-primary" onclick="location.href='/Main/address'"><?=_("Click me")?></button>
             <div class="cloudBox">
                 <h2><?=_("Want to start a business?")?></h2>
                 <h3><?=_("Click here to register yours now")?>:</h3>
