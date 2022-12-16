@@ -29,7 +29,6 @@
             </div>
         </div>
     </main>
-    <?php $this->view('Layout/Footer');?>
 </div>
 
     <?php $this->view('Layout/Scripts'); ?>
