@@ -22,5 +22,11 @@ class User extends \app\core\Model {
         $STMT->execute(["user_address"=>$this->address, "user_suite"=>$this->user_suite, "user_id"=>$this->user_id]);
     }
 
+    public function updateProfile(){
+        $SQL = "UPDATE user SET first_name = :firstName, last_name = :lastName, email = :email, user_address = :user_address, user_suite = :user_suite WHERE user_id = :user_id";
+        $STMT = self::$_connection->prepare($SQL);
+        $STMT->execute(["user_address"=>$this->address, "user_suite"=>$this->user_suite, "user_id"=>$this->user_id]);
+    }
+
     
 }

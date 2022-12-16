@@ -111,4 +111,21 @@ class Account extends \app\core\Controller {
         }
 
     }
+
+    public function updateProfile(){
+        $currentUser = new \app\models\User();
+        $currentUser->user_id = $_SESSION['user_id'];
+        $currentUser->first_name = $this->validate_input($_POST['firstName']);
+        $currentUser->last_name = $this->validate_input($_POST['lastName']);
+        $currentUser->email = $this->validate_input($_POST['email']);
+        $currentUser->user_address = $this->validate_input($_POST['address']);
+        $suite = $this->validate_input($_POST['suite']);
+
+        if($suite) {
+            $_SESSION['deliverTo'] = $_SESSION['deliverTo'] . " Suite $suite";
+        }
+
+        $currentUser->updateProfile();
+        $currentUser = $currentUser->get($_SESSION["email"]);
+    }
 }
