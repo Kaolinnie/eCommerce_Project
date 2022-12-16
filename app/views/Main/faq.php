@@ -26,7 +26,11 @@
 
         <h2>How can I make recommendations?</h2>
         <h3>Unfortunately its a feature that isn't implemented yet! We are working on it!</h3>
+        <br>
+        <a href="/Main/index"><h3 style="text-align: center;">Back to main page</h3></a>
         </div>
+        
+
     </main>
 
     <?php $this->view('Layout/Scripts');?>
