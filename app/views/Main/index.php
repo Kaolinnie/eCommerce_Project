@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <?php $this->view('Layout/HeadLinks');?>
     <link rel="stylesheet" href="/resources/styles/homeStyles.css">
-    <link rel="stylesheet" href="/resources/styles/companyStyles.css">
     <title><?=_("Home")?></title>
 </head>
 <body>
-    <?php $this->view('Layout/Menu'); ?>
-
     <div id="content">
+        <div class="extended-menu">
+            <ul class="left-menu">
+                <li><a class='active' href="/"><?=_("Home")?></a></li>
+                <li><a href="/Main/explore"><?=_("Explore")?></a></li>
+                <li><a href="/Main/faq"><?=_("FAQ")?></a></li>
+            </ul>
+            <ul class="right-menu">
+                <li>
+                    <?php
+                        if(isset($_SESSION['user_id'])) echo "<a href='/Account/logout'>"._("Logout")."</a>";
+                        else echo "<a href='/Account/login'>"._("Login")."</a>";
+                    ?>
+                </li>
+            </ul>
+        </div>
         <main>
-            <div class="business_page">
-                <div class="content_box">
-                    <div class="layoutGrid">  
-                    <?php $this->view('Layout/PageBrief', $data); ?>
-                    </div>
-                </div>
+            <div class="title">
+                <h1><img src="/resources/images/logo.png" alt="">XXX</h1>
+                <p>XXX <?=_('is here to help you get your belly satisfied without needing to step outside!')?></p>
+
+                <br>
+                <h6><?=_('Come join us in our quest to try all foods!')?></h6>
+                <button class="btn btn-light" onclick="location.href='/Main/explore'"><?=_('Explore')?></button>
             </div>
-            <div class="cloudBox">
+
+            <div class="join_business">
                 <h2><?=_("Want to start a business?")?></h2>
                 <h3><?=_("Click here to register yours now")?>:</h3>
                 <button class="btn btn-primary" onclick="location.href='/Company/index'"><?=_("Click me")?></button>

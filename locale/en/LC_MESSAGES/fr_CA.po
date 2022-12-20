@@ -1,0 +1,241 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-20 17:16-0500\n"
+"PO-Revision-Date: 2022-12-20 17:30-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: app/filters/address.php:10
+msgid "Address is not set, go into the left side menu to set it"
+msgstr ""
+"L'adresse n'est pas définie, allez dans le menu latéral gauche pour la "
+"définir"
+
+#: app/filters/checkout.php:10
+msgid "You have nothing in your cart!"
+msgstr "Vous n'avez rien dans votre panier !"
+
+#: app/views/Account/login.php:7
+msgid "Account"
+msgstr "Compte"
+
+#: app/views/Account/login.php:14 app/views/Account/login.php:18
+#: app/views/Main/index.php:21
+msgid "Login"
+msgstr "Connexion"
+
+#: app/views/Account/profile.php:7
+msgid "Profile"
+msgstr "Profil"
+
+#: app/views/Account/profile.php:14
+msgid "My Profile"
+msgstr "Mon profil"
+
+#: app/views/Account/profile.php:18 app/views/Main/checkout.php:21
+msgid "First name"
+msgstr "Prénom"
+
+#: app/views/Account/profile.php:22 app/views/Main/checkout.php:25
+msgid "Last name"
+msgstr "Nom de famille"
+
+#: app/views/Account/profile.php:28
+msgid "Email"
+msgstr "Courriel"
+
+#: app/views/Account/profile.php:33 app/views/Main/checkout.php:35
+msgid "Address"
+msgstr "Adresse"
+
+#: app/views/Account/profile.php:38
+msgid "Address 2"
+msgstr "Adresse 2"
+
+#: app/views/Account/profile.php:44
+msgid "Change Profile Picture"
+msgstr "Changer Photo Profil"
+
+#: app/views/Account/profile.php:47
+msgid "Update Profile"
+msgstr "Mettre à jour"
+
+#: app/views/Account/profile.php:49 app/views/Main/faq.php:26
+#: app/views/Main/thankyou.php:12
+msgid "Back to main page"
+msgstr "Retour"
+
+#: app/views/Company/companyPage.php:22
+msgid "Products"
+msgstr "Produits"
+
+#: app/views/Company/index.php:6
+msgid "Register Company"
+msgstr "Enregistrer la compagnie"
+
+#: app/views/Company/index.php:14
+msgid "Register your Company"
+msgstr "Enregistrer votre compagnie"
+
+#: app/views/Company/index.php:15
+msgid ""
+"Please note that this is only a request, you will receive an email "
+"confirmation when our team approves your company page!"
+msgstr ""
+"Veuillez savoir que celui-là n'est qu'un requête. Vous allez recevrez un "
+"courriel de confirmation dès que l'équipe vous approuvera."
+
+#: app/views/Layout/CartProduct.php:4 app/views/Main/checkout.php:7
+#: app/views/Main/checkout.php:15
+msgid "Checkout"
+msgstr "Payer"
+
+#: app/views/Layout/Menu.php:12
+msgid "Welcome"
+msgstr "Bienvenue"
+
+#: app/views/Layout/Menu.php:62
+msgid "Register"
+msgstr "Enregistrer"
+
+#: app/views/Layout/Menu.php:73
+msgid "Cart"
+msgstr "Panier"
+
+#: app/views/Layout/Menu.php:74
+msgid "Items"
+msgstr "Objets"
+
+#: app/views/Main/checkout.php:30
+msgid "Email address"
+msgstr "Courriel"
+
+#: app/views/Main/checkout.php:41
+msgid "Card Number"
+msgstr "Numéro de carte"
+
+#: app/views/Main/checkout.php:45
+msgid "Card Expiry"
+msgstr "Date d'expiration"
+
+#: app/views/Main/checkout.php:49
+msgid "Card CVC"
+msgstr "CVC"
+
+#: app/views/Main/checkout.php:54
+msgid "Submit Order"
+msgstr "Soumettre la commande"
+
+#: app/views/Main/explore.php:7 app/views/Main/index.php:14
+#: app/views/Main/index.php:33
+msgid "Explore"
+msgstr "Explorer"
+
+#: app/views/Main/faq.php:5 app/views/Main/index.php:15
+msgid "FAQ"
+msgstr "FAQ"
+
+#: app/views/Main/faq.php:11
+msgid "What payments methods do we take?"
+msgstr "Nous prenons quelles formes de payment?"
+
+#: app/views/Main/faq.php:12
+msgid ""
+"Resto-To-Door takes 3 payments methods, Debit Card, Credit Card and Cash"
+msgstr ""
+"Resto-To-Door prend 3 formes de payment: débit, carte de crédit, et argent"
+
+#: app/views/Main/faq.php:14
+msgid "Is this service really free?"
+msgstr "Est-ce service vraiment gratuit?"
+
+#: app/views/Main/faq.php:15
+msgid "Yes it is! All orders are free as a part of our kickstarter!"
+msgstr "Oui, ce l'est! Tous les commandes sont gratuites pendant le démarreur!"
+
+#: app/views/Main/faq.php:17
+msgid "My order was incorrect what can I do?"
+msgstr "Ma commande n'était pas correct, qu'est-ce que je peux faire?"
+
+#: app/views/Main/faq.php:18
+msgid ""
+"As a part of our service, we give credit based on any items that are wrong "
+"or missing from your order!"
+msgstr ""
+"Dans le cadre de notre service, nous vous donnons des crédits cependant les "
+"mauvais produits ou les produits manquant!"
+
+#: app/views/Main/faq.php:20
+msgid "Why is this a better option then other food delivery services?"
+msgstr ""
+"Pourquoi sommes nous meilleurs que les autres services de livraison pour "
+"nourriture?"
+
+#: app/views/Main/faq.php:21
+msgid ""
+"Everything we do is done to the utmost care, and absolutely free for our "
+"customers!"
+msgstr ""
+"Tout ce que nous faisons est fait avec le plus grand soin, et absolument "
+"gratuit pour nos clients !"
+
+#: app/views/Main/faq.php:23
+msgid "How can I make recommendations?"
+msgstr "Comment puis-je faire des recommandations?"
+
+#: app/views/Main/faq.php:24
+msgid ""
+"Unfortunately its a feature that isn't implemented yet! We are working on it!"
+msgstr ""
+"Malheureusement, c'est une fonctionnalité qui n'est pas encore implémentée ! "
+"Nous y travaillons!"
+
+#: app/views/Main/index.php:7 app/views/Main/index.php:13
+msgid "Home"
+msgstr "Acceuil"
+
+#: app/views/Main/index.php:20
+msgid "Logout"
+msgstr "Deconnexion"
+
+#: app/views/Main/index.php:29
+msgid ""
+"is here to help you get your belly satisfied without needing to step outside!"
+msgstr "est là pour vous aider à satisfaire votre ventre sans avoir à sortir !"
+
+#: app/views/Main/index.php:32
+msgid "Come join us in our quest to try all foods!"
+msgstr "Venez nous rejoindre dans notre quête pour essayer tous les aliments!"
+
+#: app/views/Main/index.php:37
+msgid "Want to start a business?"
+msgstr "Vous voulez démarrer une entreprise?"
+
+#: app/views/Main/index.php:38
+msgid "Click here to register yours now"
+msgstr "Cliquez ici pour enregistrer le vôtre maintenant"
+
+#: app/views/Main/index.php:39
+msgid "Click me"
+msgstr "Cliquez moi"
+
+#: app/views/Main/thankyou.php:5
+msgid "Thank you"
+msgstr "Merci"
+
+#: app/views/Main/thankyou.php:11
+msgid "Thank you for ordering!"
+msgstr "Merci de votre commande!"

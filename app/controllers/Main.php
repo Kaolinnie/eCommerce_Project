@@ -13,5 +13,10 @@ class Main extends \app\core\Controller {
     public function faq() {
         $this->view('Main/Faq');
     }
-    
+    public function explore() {
+        $pages = new \app\models\Page();
+        $pages = $pages->getAll();
+        $this->view('Main/explore', $pages);
+    }
+
 }

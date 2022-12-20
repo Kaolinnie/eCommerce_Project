@@ -28,7 +28,7 @@
     <div class="address_box" onclick="openSubview()">
         <div class="address_box_content">
 
-            <img class="location_icon_hamburger" src="/resources/images/location.png" alt="">
+            <img class="location_icon_hamburger" src="/resources/images/location.png" style='filter:invert(100%);-webkit-filter:invert(100%);' alt="">
             <span id="location_text">
 
             <?php
@@ -45,17 +45,22 @@
             </span>
         </div>
     </div>
+    <div class="navigation_div">
+        <ul class="navigation_list">
+            <li><a href='\'><img src='/resources/images/home.png' alt='' style='filter:invert(100%);-webkit-filter:invert(100%);'></a></li>
+            <li><a href='\Main\explore'><img src='/resources/images/explore.png' alt='' style='filter:invert(100%);-webkit-filter:invert(100%);'></a></li>
+            <li><a href='\Main\faq'><img src='/resources/images/faq.png' alt='' style='filter:invert(100%);-webkit-filter:invert(100%);'></a></li>
+        </ul>
+    </div>
     <div id="account">
         <?php
         if(isset($_SESSION['user_id'])){
-            $profileText = _('Profile');
-            echo "<button type='button' class='btn btn-warning' onclick=\"location.href='/Account/profile'\">$profileText</button>";
+            echo "<a href='\Account\profile'><img src='/resources/images/profile.png' alt='' style='filter:invert(100%);-webkit-filter:invert(100%);'></a>";
             echo "<a href='\Account\logout'><img src='/resources/images/logout.png' alt='' style='filter:invert(100%);-webkit-filter:invert(100%);'></a>";
         }
         else {
-            $loginText = _('Login');
             $registerText = _('Register');
-            echo  "<button type='button' class='signIn' onclick=\"location.href='/Account/login'\">$loginText</button>";
+            echo "<a href='\Account\login'><img src='/resources/images/login.png' alt='' style='filter:invert(100%);-webkit-filter:invert(100%);'></a>";
             echo  "<button type='button' class='signUp' onclick=\"location.href='/Account/register'\">$registerText</button>";
         }
         ?>

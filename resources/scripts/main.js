@@ -65,11 +65,11 @@ $(document).ready(function(){
             content: error_message,
             theme: 'Modern',
             closeIcon: function() {
-                location.href='/'
+                location.href='/Main/explore'
             },
             buttons: {
                 ok: function() {
-                    location.href='/'
+                    location.href='/Main/explore'
                 }
             }
         })
